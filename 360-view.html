@@ -1,0 +1,252 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>360° Virtual Tour | T & H Inn | Edappally, Kochi</title>
+    <meta name="description" content="Take an interactive 360-degree virtual tour of T & H Inn rooms, living suites, and facilities in Edappally, Kochi. Explore before you book.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="assets/css/bootstrap.4.5.2.min.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <section class="header_area">
+        <div class="header_navbar sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/logo.png" alt="T & H Inn Logo" style="max-height: 48px; width: auto;">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item"><a href="index.html">Home</a></li>
+                                    <li class="nav-item"><a href="about.html">About</a></li>
+                                    <li class="nav-item"><a href="rooms.html">Rooms</a></li>
+                                    <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+                                    <li class="nav-item"><a href="contact.html">Contact</a></li>
+                                    <li class="nav-item active"><a href="360-view.html" class="text-warning font-weight-bold">360° Tour</a></li>
+                                </ul>
+                            </div>
+                            <div class="navbar-btn d-none d-sm-inline-block ml-3">
+                                <a href="booking.html" class="main-btn">Book Now</a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Banner -->
+    <section class="page_heading_banner" style="background-image: url('assets/images/hero-1.jpg');">
+        <div class="container text-center">
+            <span class="badge badge-warning px-3 py-2 text-uppercase mb-2 font-weight-bold">Interactive Experience</span>
+            <h1 class="text-white font-weight-bold display-4">360° Virtual Property Tour</h1>
+            <p class="lead text-light max-w-700 mx-auto">Explore T & H Inn from anywhere. Drag to rotate, pinch or scroll to zoom, and tap hotspots to move between rooms.</p>
+        </div>
+    </section>
+
+    <!-- 360 Viewer Section -->
+    <section class="py-5 bg-light">
+        <div class="container py-3">
+            
+            <!-- Instructions Bar -->
+            <div class="row mb-4">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="p-3 bg-white rounded shadow-sm d-flex align-items-center border">
+                        <i class="fas fa-hand-pointer text-warning fa-2x mr-3"></i>
+                        <div>
+                            <strong class="d-block text-dark">Drag to Rotate</strong>
+                            <small class="text-muted">Click & drag 360° to view surroundings</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="p-3 bg-white rounded shadow-sm d-flex align-items-center border">
+                        <i class="fas fa-search-plus text-warning fa-2x mr-3"></i>
+                        <div>
+                            <strong class="d-block text-dark">Pinch / Scroll to Zoom</strong>
+                            <small class="text-muted">Get a closer look at room details</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 bg-white rounded shadow-sm d-flex align-items-center border">
+                        <i class="fas fa-map-marker-alt text-warning fa-2x mr-3"></i>
+                        <div>
+                            <strong class="d-block text-dark">Interactive Hotspots</strong>
+                            <small class="text-muted">Tap arrows to move room to room</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 360 Frame Container -->
+            <div class="tour_360_wrapper" id="tour360Wrapper">
+                <div class="tour_360_header">
+                    <h2 class="tour_360_title">
+                        <i class="fas fa-vr-cardboard text-warning"></i> T & H Inn Interactive 360° Tour
+                    </h2>
+                    <div class="tour_360_controls">
+                        <button type="button" class="tour_360_btn" id="toggleFullscreenBtn" title="Toggle Fullscreen">
+                            <i class="fas fa-expand"></i> <span>Fullscreen</span>
+                        </button>
+                        <button type="button" class="tour_360_btn" id="reload360Btn" title="Reload Tour">
+                            <i class="fas fa-sync-alt"></i> <span>Reload</span>
+                        </button>
+                        <a href="https://elzonex360.com/360/thinn3/" target="_blank" rel="noopener" class="tour_360_btn" title="Open in Direct Window">
+                            <i class="fas fa-external-link-alt"></i> <span>New Tab</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tour_360_iframe_container">
+                    <iframe 
+                        id="tour360Iframe"
+                        class="tour_360_iframe"
+                        src="https://elzonex360.com/360/thinn3/" 
+                        title="T & H Inn 360 Degree Virtual Tour"
+                        allowfullscreen="true"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Featured Rooms Quick Links -->
+            <div class="mt-5 text-center">
+                <h3 class="font-weight-bold text-dark mb-2">Explore Room Options</h3>
+                <p class="text-muted mb-4">Choose from our premium air-conditioned room categories tailored for comfort and convenience.</p>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card border-0 shadow-sm rounded-lg overflow-hidden h-100">
+                            <img src="assets/images/room-diamond-1.jpg" class="card-img-top" alt="Diamond Room" style="height: 200px; object-fit: cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title font-weight-bold text-dark">Diamond Room</h5>
+                                <p class="card-text text-muted small flex-grow-1">Spacious premium master bedroom suite featuring 2 bedrooms, kitchen & balcony.</p>
+                                <a href="room-diamond.html" class="main-btn btn-sm mt-3">View Room Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card border-0 shadow-sm rounded-lg overflow-hidden h-100">
+                            <img src="assets/images/room-gold-1.jpg" class="card-img-top" alt="Gold Room" style="height: 200px; object-fit: cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title font-weight-bold text-dark">Gold Room</h5>
+                                <p class="card-text text-muted small flex-grow-1">Comfortable 1 BHK suite with living space, kitchen, TV, and balcony.</p>
+                                <a href="room-gold.html" class="main-btn btn-sm mt-3">View Room Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card border-0 shadow-sm rounded-lg overflow-hidden h-100">
+                            <img src="assets/images/room-silver-1.jpg" class="card-img-top" alt="Silver Room" style="height: 200px; object-fit: cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title font-weight-bold text-dark">Silver Room</h5>
+                                <p class="card-text text-muted small flex-grow-1">Cozy, budget-friendly deluxe room crafted for restful stays in Edappally.</p>
+                                <a href="room-silver.html" class="main-btn btn-sm mt-3">View Room Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer" class="footer_area bg-dark text-white">
+        <div class="footer_widget pt-80 pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <a href="index.html"><img src="assets/images/logo.png" alt="T & H Inn Logo" style="max-height: 50px;"></a>
+                        <p class="text-muted mt-3">T & H Inn offers 10 comfortable rooms in Edappally, Ernakulam.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <h4 class="footer_title text-white mb-3">Quick Navigation</h4>
+                        <ul class="link list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Property</a></li>
+                            <li><a href="rooms.html">Rooms Catalog</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                            <li><a href="360-view.html">360° Virtual Tour</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="booking.html">Room Booking</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <h4 class="footer_title text-white mb-3">Direct Reservations</h4>
+                        <p class="text-muted">Meenchira Road, Ponekkara, Edappally, Ernakulam, Kochi, Kerala 682041</p>
+                        <p class="text-warning font-weight-bold mb-2"><i class="fas fa-phone-alt"></i> +91 92077 52244</p>
+                        <a href="booking.html" class="main-btn mt-2">Book Room Now</a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-muted small mt-5 mb-0">&copy; 2026 T & H Inn. All Rights Reserved.</p>
+        </div>
+    </section>
+
+    <a href="https://wa.me/919207752244" target="_blank" rel="noopener" class="whatsapp_float"><i class="fab fa-whatsapp"></i></a>
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+    <!-- JS Files -->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/bootstrap.4.5.2.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            var iframe = document.getElementById('tour360Iframe');
+            var wrapper = document.getElementById('tour360Wrapper');
+            var fullscreenBtn = document.getElementById('toggleFullscreenBtn');
+            var reloadBtn = document.getElementById('reload360Btn');
+
+            if (reloadBtn && iframe) {
+                reloadBtn.addEventListener('click', function() {
+                    iframe.src = iframe.src;
+                });
+            }
+
+            if (fullscreenBtn && wrapper) {
+                fullscreenBtn.addEventListener('click', function() {
+                    if (!document.fullscreenElement) {
+                        if (wrapper.requestFullscreen) {
+                            wrapper.requestFullscreen();
+                        } else if (wrapper.webkitRequestFullscreen) {
+                            wrapper.webkitRequestFullscreen();
+                        } else if (wrapper.msRequestFullscreen) {
+                            wrapper.msRequestFullscreen();
+                        }
+                    } else {
+                        if (document.exitFullscreen) {
+                            document.exitFullscreen();
+                        } else if (document.webkitExitFullscreen) {
+                            document.webkitExitFullscreen();
+                        } else if (document.msExitFullscreen) {
+                            document.msExitFullscreen();
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

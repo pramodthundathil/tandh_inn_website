@@ -1,0 +1,415 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Room Booking & Reservation Enquiry | T & H Inn | Edappally, Kochi</title>
+    <meta name="description" content="Submit your room reservation enquiry at T & H Inn, Edappally, Ernakulam. Quick confirmation upon phone call or instant WhatsApp chat.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="assets/css/bootstrap.4.5.2.min.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <section class="header_area">
+        <div class="header_navbar sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/logo.png" alt="T & H Inn Logo" style="max-height: 48px; width: auto;">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item"><a href="index.html">Home</a></li>
+                                    <li class="nav-item"><a href="about.html">About</a></li>
+                                    <li class="nav-item"><a href="rooms.html">Rooms</a></li>
+                                    <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+                                    <li class="nav-item"><a href="contact.html">Contact</a></li>
+                                    <li class="nav-item"><a href="360-view.html" class="text-warning font-weight-bold">360° Tour</a></li>
+                                </ul>
+                            </div>
+                            <div class="navbar-btn d-none d-sm-inline-block ml-3">
+                                <a href="booking.html" class="main-btn">Book Now</a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Banner -->
+    <section class="page_heading_banner" style="background-image: url('assets/images/hero-2.jpg');">
+        <div class="container">
+            <span class="badge badge-warning px-3 py-2 text-uppercase mb-2 font-weight-bold">Reservation & Inquiry</span>
+            <h1 class="text-white font-weight-bold display-4">Book Your Stay</h1>
+            <p class="lead text-light max-w-700 mx-auto">Submit your room enquiry below. All room reservations are confirmed promptly upon phone call or instant WhatsApp chat.</p>
+        </div>
+    </section>
+
+    <!-- Booking Content Section -->
+    <section class="py-5 bg-light">
+        <div class="container py-3">
+
+            <!-- Confirmation Notice Banner -->
+            <div class="alert alert-warning border-warning shadow-sm p-4 rounded-lg mb-5 text-dark">
+                <div class="d-flex align-items-center flex-wrap">
+                    <div class="mr-3 mb-2 mb-md-0">
+                        <i class="fas fa-phone-volume text-warning fa-3x"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h4 class="font-weight-bold text-dark mb-1">Important: Confirmation Upon Phone Call</h4>
+                        <p class="mb-2 text-secondary">Upon submitting your reservation inquiry, our front desk manager will immediately call you at <strong>+91 92077 52244</strong> to verify dates, confirm room availability, and finalize your booking.</p>
+                        <div class="d-flex flex-wrap gap-2 mt-2">
+                            <a href="tel:9207752244" class="btn btn-warning font-weight-bold mr-2 mb-2"><i class="fas fa-phone-alt mr-1"></i> Call +91 92077 52244 Now</a>
+                            <a href="https://wa.me/919207752244" target="_blank" rel="noopener" class="btn btn-success font-weight-bold mb-2"><i class="fab fa-whatsapp mr-1"></i> Instant WhatsApp Chat</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Left Form Column -->
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <div class="bg-white p-4 p-md-5 rounded shadow-sm border">
+                        <h3 class="font-weight-bold text-dark mb-3"><i class="fas fa-calendar-check text-warning mr-2"></i> Room Reservation Inquiry</h3>
+                        <p class="text-muted small mb-4">Please fill in your travel details to send your booking inquiry to T & H Inn front desk.</p>
+                        
+                        <form id="booking-form" method="POST">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="guest_name" class="font-weight-bold text-dark small">Full Name *</label>
+                                    <input type="text" id="guest_name" name="guest_name" class="form-control" placeholder="Enter your full name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="guest_phone" class="font-weight-bold text-dark small">Phone Number (WhatsApp) *</label>
+                                    <input type="tel" id="guest_phone" name="guest_phone" class="form-control" placeholder="e.g. 9876543210" required>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="guest_email" class="font-weight-bold text-dark small">Email Address *</label>
+                                    <input type="email" id="guest_email" name="guest_email" class="form-control" placeholder="e.g. yourname@gmail.com" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="room_type" class="font-weight-bold text-dark small">Preferred Room Category *</label>
+                                    <select id="room_type" name="room_type" class="form-control" required>
+                                        <option value="Diamond Room (2 BHK Suite)">Diamond Room (2 BHK Suite - Up to 4 Guests)</option>
+                                        <option value="Gold Room (1 BHK Suite)">Gold Room (1 BHK Suite - Up to 3 Guests)</option>
+                                        <option value="Silver Room (Deluxe)">Silver Room (Deluxe - Up to 3 Guests)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="guests_count" class="font-weight-bold text-dark small">Number of Guests *</label>
+                                    <select id="guests_count" name="guests_count" class="form-control" required>
+                                        <option value="1 Guest">1 Guest</option>
+                                        <option value="2 Guests" selected>2 Guests</option>
+                                        <option value="3 Guests">3 Guests</option>
+                                        <option value="4+ Guests">4+ Guests</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="checkin_date" class="font-weight-bold text-dark small">Check-In Date *</label>
+                                    <input type="date" id="checkin_date" name="checkin_date" class="form-control" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="checkout_date" class="font-weight-bold text-dark small">Check-Out Date *</label>
+                                    <input type="date" id="checkout_date" name="checkout_date" class="form-control" required>
+                                </div>
+                                <div class="col-md-12 mb-4">
+                                    <label for="special_requests" class="font-weight-bold text-dark small">Special Requests / Comments</label>
+                                    <textarea id="special_requests" name="special_requests" rows="3" class="form-control" placeholder="Any specific requirements (extra bed, arrival time, etc.)"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" id="booking-submit-btn" class="main-btn w-100 py-3 font-weight-bold" style="font-size: 16px;">
+                                        <i class="fas fa-paper-plane mr-2"></i> Submit Inquiry & Request Call Confirmation
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- Success Alert Box (Hidden by default) -->
+                        <div id="booking-success-msg" class="alert alert-success border-success mt-4 p-4 rounded text-center d-none">
+                            <i class="fas fa-check-circle text-success fa-3x mb-3"></i>
+                            <h4 class="font-weight-bold text-dark">Enquiry Submitted Successfully!</h4>
+                            <p class="text-secondary mb-3">Thank you, <span id="res_name" class="font-weight-bold"></span>! Your reservation inquiry for <strong id="res_room"></strong> has been received.</p>
+                            <div class="p-3 bg-light rounded text-left small border mb-4 text-dark">
+                                <div class="mb-1"><i class="fas fa-user text-primary mr-2"></i> <strong>Guest:</strong> <span id="res_guest_detail"></span></div>
+                                <div class="mb-1"><i class="fas fa-phone text-warning mr-2"></i> <strong>Phone:</strong> <span id="res_phone"></span></div>
+                                <div class="mb-1"><i class="fas fa-calendar-alt text-info mr-2"></i> <strong>Dates:</strong> <span id="res_dates"></span></div>
+                                <div class="mb-1"><i class="fas fa-users text-secondary mr-2"></i> <strong>Guests:</strong> <span id="res_guests"></span></div>
+                                <div id="res_notes_wrapper" class="mb-1 d-none"><i class="fas fa-sticky-note text-secondary mr-2"></i> <strong>Notes:</strong> <span id="res_notes"></span></div>
+                            </div>
+                            <div class="d-flex flex-column flex-sm-row justify-content-center gap-2 mt-3">
+                                <a id="wa_redirect_btn" href="#" target="_blank" rel="noopener" class="btn btn-success font-weight-bold py-3 px-4 shadow-sm mb-2 mb-sm-0">
+                                    <i class="fab fa-whatsapp fa-lg mr-2"></i> Open WhatsApp Chat
+                                </a>
+                                <a href="tel:9207752244" class="btn btn-warning font-weight-bold py-3 px-4 shadow-sm">
+                                    <i class="fas fa-phone-alt mr-2"></i> Call Front Desk (+91 92077 52244)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side Summary Column -->
+                <div class="col-lg-5">
+                    <div class="bg-white p-4 rounded shadow-sm border mb-4">
+                        <h4 class="font-weight-bold text-dark mb-3"><i class="fas fa-hotel text-warning mr-2"></i> T & H Inn Room Tariffs</h4>
+                        <div class="list-group list-group-flush mb-3">
+                            <div class="list-group-item px-0 border-bottom">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <strong class="text-dark d-block">Diamond Room (2 BHK Suite)</strong>
+                                        <small class="text-muted">Master Bedroom, Living Area, Balcony, Swing</small>
+                                    </div>
+                                    <span class="badge badge-warning font-weight-bold px-2 py-1">From ₹3,500/night</span>
+                                </div>
+                            </div>
+                            <div class="list-group-item px-0 border-bottom">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <strong class="text-dark d-block">Gold Room (1 BHK Suite)</strong>
+                                        <small class="text-muted">1 Bedroom, Living Room, Kitchen, Balcony</small>
+                                    </div>
+                                    <span class="badge badge-warning font-weight-bold px-2 py-1">From ₹2,500/night</span>
+                                </div>
+                            </div>
+                            <div class="list-group-item px-0">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <strong class="text-dark d-block">Silver Room (Deluxe)</strong>
+                                        <small class="text-muted">Cozy Deluxe Bedroom & Sitting Space</small>
+                                    </div>
+                                    <span class="badge badge-warning font-weight-bold px-2 py-1">From ₹2,000/night</span>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted d-block mb-3">* Rates subject to GST taxes as per govt norms.</small>
+                    </div>
+
+                    <!-- Listed Online Travel Platforms -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm border mb-4">
+                        <h4 class="font-weight-bold text-dark mb-3 text-center"><i class="fas fa-globe text-warning mr-2"></i> Book via Online Platforms</h4>
+                        
+                        <div class="d-flex align-items-center justify-content-center flex-wrap gap-3 py-2">
+                            <!-- Zotel Logo -->
+                            <a href="https://www.zotel.ai/hotels/t-hin" target="_blank" rel="noopener" class="ota-logo-btn m-2" title="Book on Zotel">
+                                <svg width="135" height="46" viewBox="0 0 135 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="135" height="46" rx="8" fill="#10B981"/>
+                                    <path d="M20 15H33L23 27H33V31H19L29 19H20V15Z" fill="white"/>
+                                    <text x="38" y="28" fill="white" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="16">zotel.ai</text>
+                                </svg>
+                            </a>
+
+                            <!-- Agoda Logo -->
+                            <a href="https://www.agoda.com/search?q=T%20%26%20H%20Inn%20Edappally%20Kochi" target="_blank" rel="noopener" class="ota-logo-btn m-2" title="Book on Agoda">
+                                <svg width="135" height="46" viewBox="0 0 135 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="135" height="46" rx="8" fill="#1B75BB"/>
+                                    <circle cx="22" cy="19" r="3.5" fill="#E6222E"/>
+                                    <circle cx="31" cy="19" r="3.5" fill="#F8981D"/>
+                                    <circle cx="26.5" cy="27" r="3.5" fill="#52B948"/>
+                                    <text x="40" y="28" fill="white" font-family="'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="17" letter-spacing="-0.5">agoda</text>
+                                </svg>
+                            </a>
+
+                            <!-- Booking.com Logo -->
+                            <a href="https://www.booking.com/searchresults.html?ss=T+%26+H+Inn+Edappally+Kochi" target="_blank" rel="noopener" class="ota-logo-btn m-2" title="Book on Booking.com">
+                                <svg width="145" height="46" viewBox="0 0 145 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="145" height="46" rx="8" fill="#003580"/>
+                                    <text x="12" y="28" fill="white" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="16">Booking.com</text>
+                                </svg>
+                            </a>
+
+                            <!-- MakeMyTrip Logo -->
+                            <a href="https://www.makemytrip.com/hotels/hotel-listing/?city=COK&searchText=T%20%26%20H%20Inn" target="_blank" rel="noopener" class="ota-logo-btn m-2" title="Book on MakeMyTrip">
+                                <svg width="145" height="46" viewBox="0 0 145 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="145" height="46" rx="8" fill="#EB2026"/>
+                                    <text x="10" y="28" fill="white" font-family="'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="15">make<tspan fill="#FFF" font-weight="400">my</tspan>trip</text>
+                                </svg>
+                            </a>
+
+                            <!-- TripAdvisor Logo -->
+                            <a href="https://www.tripadvisor.com/Search?q=T%20%26%20H%20Inn%20Edappally%20Kochi" target="_blank" rel="noopener" class="ota-logo-btn m-2" title="Book on Tripadvisor">
+                                <svg width="150" height="46" viewBox="0 0 150 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="150" height="46" rx="8" fill="#00AF87"/>
+                                    <circle cx="21" cy="23" r="7" stroke="white" stroke-width="2.5" fill="none"/>
+                                    <circle cx="21" cy="23" r="2.5" fill="white"/>
+                                    <circle cx="37" cy="23" r="7" stroke="white" stroke-width="2.5" fill="none"/>
+                                    <circle cx="37" cy="23" r="2.5" fill="white"/>
+                                    <path d="M25 15L29 12L33 15" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                    <text x="50" y="28" fill="white" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="15">tripadvisor</text>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer" class="footer_area bg-dark text-white">
+        <div class="footer_widget pt-80 pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <a href="index.html"><img src="assets/images/logo.png" alt="T & H Inn Logo" style="max-height: 50px;"></a>
+                        <p class="text-muted mt-3">T & H Inn offers 10 comfortable rooms in Edappally, Ernakulam.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <h4 class="footer_title text-white mb-3">Quick Navigation</h4>
+                        <ul class="link list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Property</a></li>
+                            <li><a href="rooms.html">Rooms Catalog</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                            <li><a href="360-view.html">360° Virtual Tour</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="booking.html">Room Booking</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <h4 class="footer_title text-white mb-3">Direct Reservations</h4>
+                        <p class="text-muted">Meenchira Road, Ponekkara, Edappally, Ernakulam, Kochi, Kerala 682041</p>
+                        <p class="text-warning font-weight-bold mb-2"><i class="fas fa-phone-alt"></i> +91 92077 52244</p>
+                        <a href="booking.html" class="main-btn mt-2">Book Room Now</a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-muted small mt-5 mb-0">&copy; 2026 T & H Inn. All Rights Reserved.</p>
+        </div>
+    </section>
+
+    <a href="https://wa.me/919207752244" target="_blank" rel="noopener" class="whatsapp_float"><i class="fab fa-whatsapp"></i></a>
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+    <!-- JS Files -->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.4.5.2.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Support room selection via URL query parameter (e.g. booking.html?room=diamond)
+            var urlParams = new URLSearchParams(window.location.search);
+            var roomParam = urlParams.get('room');
+            if (roomParam) {
+                roomParam = roomParam.toLowerCase();
+                if (roomParam.indexOf('diamond') !== -1) {
+                    $('#room_type').val('Diamond Room (2 BHK Suite)');
+                } else if (roomParam.indexOf('gold') !== -1) {
+                    $('#room_type').val('Gold Room (1 BHK Suite)');
+                } else if (roomParam.indexOf('silver') !== -1) {
+                    $('#room_type').val('Silver Room (Deluxe)');
+                }
+            }
+
+            // Set default date inputs to today and tomorrow
+            var today = new Date();
+            var tomorrow = new Date();
+            tomorrow.setDate(today.getDate() + 1);
+
+            document.getElementById('checkin_date').valueAsDate = today;
+            document.getElementById('checkout_date').valueAsDate = tomorrow;
+
+            // Handle booking form submission via AJAX
+            $('#booking-form').on('submit', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                var $form = $(this);
+                var $btn = $('#booking-submit-btn');
+
+                var name = $('#guest_name').val().trim();
+                var phone = $('#guest_phone').val().trim();
+                var email = $('#guest_email').val().trim();
+                var room = $('#room_type').val();
+                var guests = $('#guests_count').val();
+                var checkin = $('#checkin_date').val();
+                var checkout = $('#checkout_date').val();
+                var requests = $('#special_requests').val().trim();
+
+                // Build WhatsApp message text
+                var waMessage = "*New Room Booking Inquiry - T & H Inn*\n\n" +
+                    "👤 *Guest Name:* " + name + "\n" +
+                    "📞 *Phone:* " + phone + "\n" +
+                    "✉️ *Email:* " + email + "\n" +
+                    "🏨 *Room Category:* " + room + "\n" +
+                    "👥 *Guests:* " + guests + "\n" +
+                    "📅 *Check-In:* " + checkin + "\n" +
+                    "📅 *Check-Out:* " + checkout + "\n" +
+                    "📝 *Special Requests:* " + (requests || "None");
+
+                var waUrl = "https://wa.me/919207752244?text=" + encodeURIComponent(waMessage);
+
+                // Disable button & show spinner
+                $btn.prop('disabled', true).html('<i class="fas fa-spinner fa-spin mr-2"></i> Submitting Inquiry...');
+
+                // Send background AJAX request to Formspree
+                fetch('https://formspree.io/f/xrpgjowe', {
+                    method: 'POST',
+                    body: new FormData($form[0]),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).catch(function(err) {
+                    console.log('Formspree submit:', err);
+                });
+
+                // Update UI success fields immediately
+                $('#res_name').text(name);
+                $('#res_room').text(room);
+                $('#res_guest_detail').text(name + ' (' + email + ')');
+                $('#res_phone').text(phone);
+                $('#res_dates').text(checkin + ' to ' + checkout);
+                $('#res_guests').text(guests);
+                
+                if (requests) {
+                    $('#res_notes').text(requests);
+                    $('#res_notes_wrapper').removeClass('d-none');
+                } else {
+                    $('#res_notes_wrapper').addClass('d-none');
+                }
+
+                $('#wa_redirect_btn').attr('href', waUrl);
+
+                $('#booking-form').addClass('d-none');
+                $('#booking-success-msg').removeClass('d-none');
+
+                // Smooth scroll to success message box
+                $('html, body').animate({
+                    scrollTop: $('#booking-success-msg').offset().top - 120
+                }, 400);
+
+                // Open WhatsApp in new tab synchronously during user click handler
+                try {
+                    window.open(waUrl, '_blank');
+                } catch(err) {
+                    console.log('WhatsApp open:', err);
+                }
+
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

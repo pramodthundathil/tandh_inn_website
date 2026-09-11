@@ -1,0 +1,530 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Rooms & Tariffs | T & H Inn | Edappally, Ernakulam</title>
+    <meta name="description" content="Explore rooms & tariffs at T & H Inn, Edappally. Diamond 2BHK Suite, Gold 1BHK Suite, and Silver Deluxe rooms equipped with AC, hot water, Wi-Fi, and parking.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="assets/css/bootstrap.4.5.2.min.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .room-card-premium {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 16px;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .room-card-premium:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12) !important;
+        }
+
+        .room-badge-pill {
+            background: linear-gradient(135deg, #D48B14, #f59e0b);
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .price-tag-box {
+            background: #0f172a;
+            color: #ffffff;
+            padding: 10px 18px;
+            border-radius: 12px;
+            text-align: right;
+        }
+
+        .amenity-chip {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-size: 13px;
+            color: #334155;
+            display: inline-flex;
+            align-items: center;
+            margin-right: 6px;
+            margin-bottom: 8px;
+        }
+
+        .amenity-chip i {
+            color: #D48B14;
+            margin-right: 6px;
+        }
+
+        .room-img-wrapper {
+            position: relative;
+            height: 100%;
+            min-height: 280px;
+            overflow: hidden;
+        }
+
+        .room-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .room-card-premium:hover .room-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .tour-cta-banner {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border-radius: 16px;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tour-cta-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(212, 139, 20, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+            pointer-events: none;
+        }
+
+        @media (max-width: 991.98px) {
+            .room-img-wrapper {
+                height: 240px;
+                min-height: auto;
+            }
+            .price-tag-box {
+                text-align: left;
+                margin-top: 10px;
+            }
+        }
+
+        .room-card-actions-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+            gap: 10px;
+        }
+
+        .room-card-btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        @media (max-width: 767.98px) {
+            .room-card-actions-wrapper {
+                flex-direction: column !important;
+                align-items: stretch !important;
+            }
+            .room-card-btn-group {
+                flex-direction: column !important;
+                width: 100% !important;
+                gap: 8px !important;
+            }
+            .room-card-btn-group a {
+                width: 100% !important;
+                margin-right: 0 !important;
+                margin-bottom: 0 !important;
+                text-align: center !important;
+                box-sizing: border-box !important;
+                display: block !important;
+                padding: 12px 14px !important;
+                font-size: 14px !important;
+                white-space: normal !important;
+            }
+            .wa-inquiry-link {
+                text-align: center !important;
+                display: block !important;
+                width: 100% !important;
+                margin-top: 6px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <section class="header_area">
+        <div class="header_navbar sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/logo.png" alt="T & H Inn Logo" style="max-height: 48px; width: auto;">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item"><a href="index.html">Home</a></li>
+                                    <li class="nav-item"><a href="about.html">About</a></li>
+                                    <li class="nav-item active"><a href="rooms.html">Rooms</a></li>
+                                    <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+                                    <li class="nav-item"><a href="contact.html">Contact</a></li>
+                                    <li class="nav-item"><a href="360-view.html" class="text-warning font-weight-bold">360° Tour</a></li>
+                                </ul>
+                            </div>
+                            <div class="navbar-btn d-none d-sm-inline-block ml-3">
+                                <a href="booking.html" class="main-btn">Book Now</a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Banner -->
+    <section class="page_heading_banner" style="background-image: url('assets/images/hero-2.jpg');">
+        <div class="container text-center">
+            <span class="badge badge-warning px-3 py-2 text-uppercase mb-2 font-weight-bold">Comfort & Luxury</span>
+            <h1 class="text-white font-weight-bold display-4">Rooms & Suites Catalog</h1>
+            <p class="lead text-light max-w-700 mx-auto">Explore our Diamond, Gold, and Silver air-conditioned rooms designed for families, business, and leisure stays in Edappally, Kochi.</p>
+        </div>
+    </section>
+
+    <!-- Highlights Features Strip -->
+    <div class="bg-white border-bottom py-3 shadow-xs">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-6 col-md-3 py-2">
+                    <i class="fas fa-snowflake text-warning fa-lg mb-1"></i>
+                    <h6 class="mb-0 text-dark small font-weight-bold">Air Conditioned</h6>
+                    <small class="text-muted">In All Rooms</small>
+                </div>
+                <div class="col-6 col-md-3 py-2">
+                    <i class="fas fa-wifi text-warning fa-lg mb-1"></i>
+                    <h6 class="mb-0 text-dark small font-weight-bold">High Speed Wi-Fi</h6>
+                    <small class="text-muted">Free Unlimited</small>
+                </div>
+                <div class="col-6 col-md-3 py-2">
+                    <i class="fas fa-shower text-warning fa-lg mb-1"></i>
+                    <h6 class="mb-0 text-dark small font-weight-bold">24/7 Hot Water</h6>
+                    <small class="text-muted">Geyser Facility</small>
+                </div>
+                <div class="col-6 col-md-3 py-2">
+                    <i class="fas fa-parking text-warning fa-lg mb-1"></i>
+                    <h6 class="mb-0 text-dark small font-weight-bold">Free Car Parking</h6>
+                    <small class="text-muted">On-Site Secured</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rooms Catalog Section -->
+    <section class="py-5 bg-light">
+        <div class="container py-3">
+
+            <!-- DIAMOND ROOM CARD -->
+            <div class="room-card-premium shadow-sm mb-5">
+                <div class="row no-gutters">
+                    <div class="col-lg-5">
+                        <div class="room-img-wrapper">
+                            <img src="assets/images/room-diamond-1.jpg" alt="Diamond Room 2BHK Suite">
+                            <span class="position-absolute top-0 left-0 m-3 room-badge-pill shadow">
+                                <i class="fas fa-gem mr-1"></i> 2 BHK Master Suite
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 p-4 p-md-5 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start flex-wrap mb-3">
+                                <div>
+                                    <h2 class="font-weight-bold text-dark mb-1 h3">Diamond Room (2 BHK Suite)</h2>
+                                    <span class="text-muted small"><i class="fas fa-layer-group text-warning mr-1"></i> 2 Units Available • Up to 4 Guests</span>
+                                </div>
+                                <div class="price-tag-box">
+                                    <div class="h4 font-weight-bold mb-0">₹3,500 <span class="small font-weight-normal">/ night</span></div>
+                                    <small class="text-warning">*Exclusive direct tariff</small>
+                                </div>
+                            </div>
+
+                            <p class="text-secondary leading-relaxed mb-4">Our flagship Diamond room features 2 spacious bedrooms, a private living room, kitchenette with refrigerator, relaxing swing, TV, and an open balcony. Ideal for families and groups looking for luxury and homely space.</p>
+
+                            <div class="mb-4">
+                                <span class="amenity-chip"><i class="fas fa-bed"></i> 2 Queen Beds</span>
+                                <span class="amenity-chip"><i class="fas fa-snowflake"></i> Air Conditioning</span>
+                                <span class="amenity-chip"><i class="fas fa-couch"></i> Living Room & Sofa</span>
+                                <span class="amenity-chip"><i class="fas fa-utensils"></i> Kitchen & Fridge</span>
+                                <span class="amenity-chip"><i class="fas fa-umbrella-beach"></i> Swing & Balcony</span>
+                                <span class="amenity-chip"><i class="fas fa-bath"></i> 2 Attached Baths</span>
+                                <span class="amenity-chip"><i class="fas fa-wifi"></i> Free High-Speed Wi-Fi</span>
+                            </div>
+                        </div>
+
+                        <div class="room-card-actions-wrapper">
+                            <div class="room-card-btn-group">
+                                <a href="booking.html?room=diamond" class="main-btn font-weight-bold"><i class="fas fa-calendar-check mr-2"></i> Book Diamond Room</a>
+                                <a href="room-diamond.html" class="btn btn-outline-dark font-weight-bold">View Details &rarr;</a>
+                            </div>
+                            <a href="https://wa.me/919207752244?text=Hi%2C%20I%20am%20interested%20in%20booking%20the%20Diamond%20Room%20at%20T%20%26%20H%20Inn." target="_blank" rel="noopener" class="text-success font-weight-bold small wa-inquiry-link">
+                                <i class="fab fa-whatsapp fa-lg mr-1"></i> Instant WhatsApp Inquiry
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GOLD ROOM CARD -->
+            <div class="room-card-premium shadow-sm mb-5">
+                <div class="row no-gutters">
+                    <div class="col-lg-5">
+                        <div class="room-img-wrapper">
+                            <img src="assets/images/room-gold-1.jpg" alt="Gold Room 1BHK Suite">
+                            <span class="position-absolute top-0 left-0 m-3 room-badge-pill shadow" style="background: linear-gradient(135deg, #1e293b, #0f172a);">
+                                <i class="fas fa-award mr-1"></i> 1 BHK Executive Suite
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 p-4 p-md-5 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start flex-wrap mb-3">
+                                <div>
+                                    <h2 class="font-weight-bold text-dark mb-1 h3">Gold Room (1 BHK Suite)</h2>
+                                    <span class="text-muted small"><i class="fas fa-layer-group text-warning mr-1"></i> 4 Units Available • Up to 3 Guests</span>
+                                </div>
+                                <div class="price-tag-box">
+                                    <div class="h4 font-weight-bold mb-0">₹2,500 <span class="small font-weight-normal">/ night</span></div>
+                                    <small class="text-warning">*Exclusive direct tariff</small>
+                                </div>
+                            </div>
+
+                            <p class="text-secondary leading-relaxed mb-4">Elegant 1 BHK suite featuring a king bedroom, separate spacious living area with sofa, kitchen facility, flat-screen TV, and private balcony. Perfect for couples, business travelers, and small families.</p>
+
+                            <div class="mb-4">
+                                <span class="amenity-chip"><i class="fas fa-bed"></i> 1 Queen Bed</span>
+                                <span class="amenity-chip"><i class="fas fa-snowflake"></i> Air Conditioning</span>
+                                <span class="amenity-chip"><i class="fas fa-couch"></i> Separate Living Room</span>
+                                <span class="amenity-chip"><i class="fas fa-sink"></i> Kitchenette</span>
+                                <span class="amenity-chip"><i class="fas fa-door-open"></i> Private Balcony</span>
+                                <span class="amenity-chip"><i class="fas fa-bath"></i> Hot Shower & Geyser</span>
+                                <span class="amenity-chip"><i class="fas fa-tv"></i> LED Smart TV</span>
+                            </div>
+                        </div>
+
+                        <div class="room-card-actions-wrapper">
+                            <div class="room-card-btn-group">
+                                <a href="booking.html?room=gold" class="main-btn font-weight-bold"><i class="fas fa-calendar-check mr-2"></i> Book Gold Room</a>
+                                <a href="room-gold.html" class="btn btn-outline-dark font-weight-bold">View Details &rarr;</a>
+                            </div>
+                            <a href="https://wa.me/919207752244?text=Hi%2C%20I%20am%20interested%20in%20booking%20the%20Gold%20Room%20at%20T%20%26%20H%20Inn." target="_blank" rel="noopener" class="text-success font-weight-bold small wa-inquiry-link">
+                                <i class="fab fa-whatsapp fa-lg mr-1"></i> Instant WhatsApp Inquiry
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SILVER ROOM CARD -->
+            <div class="room-card-premium shadow-sm mb-5">
+                <div class="row no-gutters">
+                    <div class="col-lg-5">
+                        <div class="room-img-wrapper">
+                            <img src="assets/images/room-silver-1.jpg" alt="Silver Deluxe Room">
+                            <span class="position-absolute top-0 left-0 m-3 room-badge-pill shadow" style="background: linear-gradient(135deg, #0284c7, #0369a1);">
+                                <i class="fas fa-medal mr-1"></i> Deluxe Bedroom
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 p-4 p-md-5 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start flex-wrap mb-3">
+                                <div>
+                                    <h2 class="font-weight-bold text-dark mb-1 h3">Silver Room (Deluxe)</h2>
+                                    <span class="text-muted small"><i class="fas fa-layer-group text-warning mr-1"></i> 4 Units Available • Up to 3 Guests</span>
+                                </div>
+                                <div class="price-tag-box">
+                                    <div class="h4 font-weight-bold mb-0">₹2,000 <span class="small font-weight-normal">/ night</span></div>
+                                    <small class="text-warning">*Exclusive direct tariff</small>
+                                </div>
+                            </div>
+
+                            <p class="text-secondary leading-relaxed mb-4">Cozy and budget-friendly deluxe room equipped with air conditioning, comfortable sitting space with sofa, ensuite bathroom with 24/7 hot water, TV, work table, and high-speed Wi-Fi.</p>
+
+                            <div class="mb-4">
+                                <span class="amenity-chip"><i class="fas fa-bed"></i> 1 Queen Bed</span>
+                                <span class="amenity-chip"><i class="fas fa-snowflake"></i> Air Conditioning</span>
+                                <span class="amenity-chip"><i class="fas fa-chair"></i> Sitting Area & Sofa</span>
+                                <span class="amenity-chip"><i class="fas fa-bath"></i> Clean Ensuite Bathroom</span>
+                                <span class="amenity-chip"><i class="fas fa-shower"></i> 24/7 Hot Water</span>
+                                <span class="amenity-chip"><i class="fas fa-wifi"></i> Free High-Speed Wi-Fi</span>
+                            </div>
+                        </div>
+
+                        <div class="room-card-actions-wrapper">
+                            <div class="room-card-btn-group">
+                                <a href="booking.html?room=silver" class="main-btn font-weight-bold"><i class="fas fa-calendar-check mr-2"></i> Book Silver Room</a>
+                                <a href="room-silver.html" class="btn btn-outline-dark font-weight-bold">View Details &rarr;</a>
+                            </div>
+                            <a href="https://wa.me/919207752244?text=Hi%2C%20I%20am%20interested%20in%20booking%20the%20Silver%20Room%20at%20T%20%26%20H%20Inn." target="_blank" rel="noopener" class="text-success font-weight-bold small wa-inquiry-link">
+                                <i class="fab fa-whatsapp fa-lg mr-1"></i> Instant WhatsApp Inquiry
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 360 VIRTUAL TOUR CTA BANNER -->
+            <div class="tour-cta-banner p-4 p-md-5 mb-5 shadow-sm text-center text-md-left">
+                <div class="row align-items-center">
+                    <div class="col-md-8 mb-3 mb-md-0">
+                        <span class="badge badge-warning text-dark font-weight-bold px-3 py-1 text-uppercase mb-2">Interactive Experience</span>
+                        <h3 class="font-weight-bold text-white mb-2">Want to See Inside Before Booking?</h3>
+                        <p class="text-light mb-0">Take a 360-degree interactive virtual tour of our Diamond, Gold, and Silver rooms, balconies, and exterior facilities.</p>
+                    </div>
+                    <div class="col-md-4 text-md-right">
+                        <a href="360-view.html" class="btn btn-warning btn-lg font-weight-bold px-4 py-3 shadow"><i class="fas fa-vr-cardboard mr-2"></i> Launch 360° Virtual Tour</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROOM COMPARISON TABLE SECTION -->
+            <div class="bg-white p-4 p-md-5 rounded-lg shadow-sm border mb-4">
+                <div class="text-center mb-4">
+                    <span class="badge badge-warning px-3 py-2 text-uppercase mb-2 font-weight-bold">Feature Comparison</span>
+                    <h3 class="font-weight-bold text-dark">Compare Room Features & Tariffs</h3>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center align-middle mb-0">
+                        <thead class="bg-dark text-white">
+                            <tr>
+                                <th class="text-left" style="width: 30%;">Feature / Amenity</th>
+                                <th style="width: 23%;" class="text-warning">Diamond (2 BHK)</th>
+                                <th style="width: 23%;" class="text-warning">Gold (1 BHK)</th>
+                                <th style="width: 24%;" class="text-warning">Silver (Deluxe)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-secondary small">
+                            <tr>
+                                <td class="text-left font-weight-bold text-dark">Tariff / Night</td>
+                                <td><strong class="text-dark">₹3,500</strong></td>
+                                <td><strong class="text-dark">₹2,500</strong></td>
+                                <td><strong class="text-dark">₹2,000</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left font-weight-bold text-dark">Max Occupancy</td>
+                                <td>4 Guests</td>
+                                <td>3 Guests</td>
+                                <td>3 Guests</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left font-weight-bold text-dark">Bedrooms</td>
+                                <td>2 Queen Bedrooms</td>
+                                <td>1 Queen Bedroom</td>
+                                <td>1 Queen Bedroom</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left font-weight-bold text-dark">Living Room & Sofa</td>
+                                <td><i class="fas fa-check-circle text-success fa-lg"></i></td>
+                                <td><i class="fas fa-check-circle text-success fa-lg"></i></td>
+                                <td><i class="fas fa-check-circle text-success fa-lg"></i> (Sitting Space)</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left font-weight-bold text-dark">Kitchen & Refrigerator</td>
+                                <td><i class="fas fa-check-circle text-success fa-lg"></i></td>
+                                <td><i class="fas fa-check-circle text-success fa-lg"></i></td>
+                                <td><i class="fas fa-times-circle text-muted"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left font-weight-bold text-dark">Swing & Open Balcony</td>
+                                <td><i class="fas fa-check-circle text-success fa-lg"></i></td>
+                                <td><i class="fas fa-check-circle text-success fa-lg"></i> (Balcony)</td>
+                                <td><i class="fas fa-times-circle text-muted"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left font-weight-bold text-dark">Air Conditioning & Wi-Fi</td>
+                                <td><i class="fas fa-check-circle text-success fa-lg"></i> Included</td>
+                                <td><i class="fas fa-check-circle text-success fa-lg"></i> Included</td>
+                                <td><i class="fas fa-check-circle text-success fa-lg"></i> Included</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left font-weight-bold text-dark">Attached Bathrooms</td>
+                                <td>2 Bathrooms</td>
+                                <td>1 Bathroom</td>
+                                <td>1 Bathroom</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left font-weight-bold text-dark">Direct Action</td>
+                                <td><a href="booking.html?room=diamond" class="btn btn-sm btn-warning font-weight-bold">Book Diamond</a></td>
+                                <td><a href="booking.html?room=gold" class="btn btn-sm btn-warning font-weight-bold">Book Gold</a></td>
+                                <td><a href="booking.html?room=silver" class="btn btn-sm btn-warning font-weight-bold">Book Silver</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer" class="footer_area bg-dark text-white">
+        <div class="footer_widget pt-80 pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <a href="index.html"><img src="assets/images/logo.png" alt="T & H Inn Logo" style="max-height: 50px;"></a>
+                        <p class="text-muted mt-3">T & H Inn offers 10 comfortable rooms in Edappally, Ernakulam.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <h4 class="footer_title text-white mb-3">Quick Navigation</h4>
+                        <ul class="link list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Property</a></li>
+                            <li><a href="rooms.html">Rooms Catalog</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                            <li><a href="360-view.html">360° Virtual Tour</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="booking.html">Room Booking</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <h4 class="footer_title text-white mb-3">Direct Reservations</h4>
+                        <p class="text-muted">Meenchira Road, Ponekkara, Edappally, Ernakulam, Kochi, Kerala 682041</p>
+                        <p class="text-warning font-weight-bold mb-2"><i class="fas fa-phone-alt"></i> +91 92077 52244</p>
+                        <a href="booking.html" class="main-btn mt-2">Book Room Now</a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-muted small mt-5 mb-0">&copy; 2026 T & H Inn. All Rights Reserved.</p>
+        </div>
+    </section>
+
+    <a href="https://wa.me/919207752244" target="_blank" rel="noopener" class="whatsapp_float" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+    <!-- JS Files -->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/bootstrap.4.5.2.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

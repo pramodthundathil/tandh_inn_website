@@ -1,0 +1,47 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/rooms"
+  to = "/rooms.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/booking"
+  to = "/booking.html"
+  status = 200
+
+[[redirects]]
+  from = "/gallery"
+  to = "/gallery.html"
+  status = 200
+
+[[redirects]]
+  from = "/360-view"
+  to = "/360-view.html"
+  status = 200
+
+[[redirects]]
+  from = "/room-diamond"
+  to = "/room-diamond.html"
+  status = 200
+
+[[redirects]]
+  from = "/room-gold"
+  to = "/room-gold.html"
+  status = 200
+
+[[redirects]]
+  from = "/room-silver"
+  to = "/room-silver.html"
+  status = 200

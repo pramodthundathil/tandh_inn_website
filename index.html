@@ -1,0 +1,792 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>T & H Inn | Official Website | Edappally, Ernakulam, Kerala</title>
+    <meta name="description" content="T & H Inn offers 10 comfortable rooms (Diamond, Gold, Silver) designed for a pleasant and convenient stay in Edappally, Ernakulam. Equipped with AC, hot water, free parking, and Wi-Fi.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+        
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!--====== Nice Select CSS ======-->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!--====== Line Icons & FontAwesome CSS ======-->
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.4.5.2.min.css">
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+
+    <!--====== HEADER PART START ======-->
+    <section class="header_area">
+        <div class="header_navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/logo.png" alt="T & H Inn Logo" style="max-height: 48px; width: auto;">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item active"><a href="index.html">Home</a></li>
+                                    <li class="nav-item"><a href="about.html">About</a></li>
+                                    <li class="nav-item"><a href="rooms.html">Rooms</a></li>
+                                    <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+                                    <li class="nav-item"><a href="contact.html">Contact</a></li>
+                                    <li class="nav-item"><a href="360-view.html" class="text-warning font-weight-bold">360° Tour</a></li>
+                                </ul>
+                            </div>
+                            <div class="navbar-btn d-none d-sm-inline-block ml-3">
+                                <a href="booking.html" class="main-btn">Book Now</a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--====== DYNAMIC SLIDING HERO SECTION ======-->
+        <div id="home" class="hero_slider_container">
+            <div class="hero_slide is-active" style="background-image: url('assets/images/hero-1.jpg')"></div>
+            <div class="hero_slide" style="background-image: url('assets/images/hero-2.jpg')"></div>
+            <div class="hero_slide" style="background-image: url('assets/images/hero-3.jpg')"></div>
+            <div class="hero_slide" style="background-image: url('assets/images/hero-4.jpg')"></div>
+            <div class="hero_slide" style="background-image: url('assets/images/hero-5.jpg')"></div>
+            
+            <div class="hero_overlay"></div>
+
+            <div class="hero_content_wrapper">
+                <span class="badge badge-pill badge-warning px-3 py-2 text-uppercase mb-3 font-weight-bold" style="letter-spacing: 1px; font-size: 12px;">Welcome to T & H Inn</span>
+                <h1 id="hero_title" class="hero_caption_title">A Homely Base in Edappally</h1>
+                <p id="hero_subtitle" class="hero_caption_subtitle">Comfortable Diamond, Gold, and Silver rooms for families, couples, and groups in Ernakulam.</p>
+                <div class="hero_action_btn_group">
+                    <a href="booking.html" class="main-btn">Book Your Stay</a>
+                    <a href="360-view.html" class="main-btn main-btn-2">Explore 360° View</a>
+                </div>
+            </div>
+
+            <!-- Slide Indicators -->
+            <div class="hero_slider_controls">
+                <span class="hero_slider_dot is-active" data-index="0"></span>
+                <span class="hero_slider_dot" data-index="1"></span>
+                <span class="hero_slider_dot" data-index="2"></span>
+                <span class="hero_slider_dot" data-index="3"></span>
+                <span class="hero_slider_dot" data-index="4"></span>
+            </div>
+
+            <!-- Booking Card Search Bar -->
+            <div class="hero_booking_card">
+                <form id="booking_form">
+                    <div class="booking_fields_grid">
+                        <div class="booking_field">
+                            <label><i class="far fa-calendar-alt text-warning mr-1"></i> Check In</label>
+                            <input type="date" id="booking_checkin" required>
+                        </div>
+                        <div class="booking_field">
+                            <label><i class="far fa-calendar-alt text-warning mr-1"></i> Check Out</label>
+                            <input type="date" id="booking_checkout" required>
+                        </div>
+                        <div class="booking_field">
+                            <label><i class="fas fa-user text-warning mr-1"></i> Adults</label>
+                            <div class="stepper_control">
+                                <button type="button" class="stepper_btn" data-action="minus" data-target="booking_adults">&minus;</button>
+                                <span class="stepper_value">2</span>
+                                <button type="button" class="stepper_btn" data-action="plus" data-target="booking_adults">+</button>
+                            </div>
+                            <input type="hidden" id="booking_adults" value="2" min="1" max="16">
+                        </div>
+                        <div class="booking_field">
+                            <label><i class="fas fa-child text-warning mr-1"></i> Children</label>
+                            <div class="stepper_control">
+                                <button type="button" class="stepper_btn" data-action="minus" data-target="booking_children">&minus;</button>
+                                <span class="stepper_value">0</span>
+                                <button type="button" class="stepper_btn" data-action="plus" data-target="booking_children">+</button>
+                            </div>
+                            <input type="hidden" id="booking_children" value="0" min="0" max="8">
+                        </div>
+                        <div class="booking_field">
+                            <label>&nbsp;</label>
+                            <button type="submit" class="main-btn w-100" style="height: 44px; line-height: 44px; padding: 0 24px;">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--====== HEADER PART ENDS ======-->
+    
+    <!--====== ABOUT PART START ======-->
+    <section id="about" class="about_area pt-120 pb-120 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about_media_container mb-4 mb-lg-0">
+                        <img class="about_main_img" src="assets/images/about-main.jpg" alt="T & H Inn Property View">
+                        <img class="about_inset_img" src="assets/images/about-inset.jpg" alt="T & H Inn Guest Space">
+                    </div>
+                </div>
+                <div class="col-lg-6 pl-lg-5">
+                    <div class="section_title">
+                        <span class="sub-title text-warning font-weight-bold text-uppercase" style="letter-spacing: 1px;">Ernakulam, Kerala, IN</span>
+                        <h2 class="title mt-2 mb-3">A Homely Base in <span>Edappally</span></h2>
+                        <p class="lead font-weight-normal text-dark">T & H Inn offers 10 comfortable rooms designed for a pleasant, convenient stay, with Diamond, Gold, and Silver room options suited to families, couples, and groups.</p>
+                    </div>
+
+                    <div class="about_proof_grid">
+                        <div class="about_fact_card">
+                            <span>10</span>
+                            <h4>Comfortable Rooms</h4>
+                            <p>2 Diamond, 4 Gold, and 4 Silver room options.</p>
+                        </div>
+                        <div class="about_fact_card">
+                            <span>Practical</span>
+                            <h4>Stay Comforts</h4>
+                            <p>All rooms include AC, 24/7 hot water, and parking.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-white rounded shadow-sm border mt-4">
+                        <strong class="text-dark">Room Breakdown:</strong>
+                        <p class="small text-muted mb-0 mt-1">
+                            <strong>Diamond Rooms (2):</strong> 2 Bedrooms, living area, kitchen, TV, refrigerator, swing & balcony.<br>
+                            <strong>Gold Rooms (4):</strong> 1 Bedroom, spacious living area, kitchen, sofa, TV & balcony.<br>
+                            <strong>Silver Rooms (4):</strong> 1 Bedroom, cozy living area with sofa and TV.
+                        </p>
+                    </div>
+
+                    <div class="mt-4">
+                        <a href="about.html" class="main-btn">Learn More About Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== ABOUT PART ENDS ======-->
+
+    <!--====== ROOM TYPES PART START ======-->
+    <section id="rooms" class="pt-120 pb-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="section_title pb-4">
+                        <span class="sub-title text-warning font-weight-bold text-uppercase">Accommodation</span>
+                        <h2 class="title">Our Room <span>Types</span></h2>
+                        <p>Designed for comfort, space, and a pleasant stay in Ernakulam</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Diamond Room -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="room_card_item">
+                        <div class="room_media_slider">
+                            <img src="assets/images/room-diamond-1.jpg" alt="Diamond Room" class="room_slider_img">
+                        </div>
+                        <div class="room_card_body">
+                            <h3 class="room_card_title">DIAMOND</h3>
+                            <div class="room_specs_badges">
+                                <span class="room_spec_badge"><i class="fas fa-bed"></i> 2 Bedrooms</span>
+                                <span class="room_spec_badge"><i class="fas fa-users"></i> Max 4 Guests</span>
+                                <span class="room_spec_badge"><i class="fas fa-door-open"></i> 2 Rooms</span>
+                            </div>
+                            <ul class="room_features_list">
+                                <li>Queen Beds</li>
+                                <li>Air-Conditioning</li>
+                                <li>Spacious Living Area</li>
+                                <li>Kitchen Facility & Refrigerator</li>
+                                <li>Relaxing Swing & Open Balcony</li>
+                                <li>Attached Bathroom & 24/7 Hot Water</li>
+                            </ul>
+                            <div class="room_card_actions">
+                                <a href="https://www.zotel.ai/hotels/t-hin" target="_blank" rel="noopener" class="main-btn">Book Now</a>
+                                <a href="room-diamond.html" class="main-btn btn-outline">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gold Room -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="room_card_item">
+                        <div class="room_media_slider">
+                            <img src="assets/images/room-gold-1.jpg" alt="Gold Room" class="room_slider_img">
+                        </div>
+                        <div class="room_card_body">
+                            <h3 class="room_card_title">GOLD</h3>
+                            <div class="room_specs_badges">
+                                <span class="room_spec_badge"><i class="fas fa-bed"></i> 1 Bedroom</span>
+                                <span class="room_spec_badge"><i class="fas fa-users"></i> Max 3 Guests</span>
+                                <span class="room_spec_badge"><i class="fas fa-door-open"></i> 4 Rooms</span>
+                            </div>
+                            <ul class="room_features_list">
+                                <li>Queen Bed</li>
+                                <li>Air-Conditioning</li>
+                                <li>Spacious Living Area</li>
+                                <li>Kitchen Facility & Sofa</li>
+                                <li>Flat-screen TV & Balcony</li>
+                                <li>Free Toiletries & Daily Housekeeping</li>
+                            </ul>
+                            <div class="room_card_actions">
+                                <a href="https://www.zotel.ai/hotels/t-hin" target="_blank" rel="noopener" class="main-btn">Book Now</a>
+                                <a href="room-gold.html" class="main-btn btn-outline">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Silver Room -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="room_card_item">
+                        <div class="room_media_slider">
+                            <img src="assets/images/room-silver-1.jpg" alt="Silver Room" class="room_slider_img">
+                        </div>
+                        <div class="room_card_body">
+                            <h3 class="room_card_title">SILVER</h3>
+                            <div class="room_specs_badges">
+                                <span class="room_spec_badge"><i class="fas fa-bed"></i> 1 Bedroom</span>
+                                <span class="room_spec_badge"><i class="fas fa-users"></i> Max 3 Guests</span>
+                                <span class="room_spec_badge"><i class="fas fa-door-open"></i> 4 Rooms</span>
+                            </div>
+                            <ul class="room_features_list">
+                                <li>Queen Bed</li>
+                                <li>Air-Conditioning</li>
+                                <li>Comfortable Living Area</li>
+                                <li>Sofa & Flat-screen TV</li>
+                                <li>Daily Housekeeping</li>
+                                <li>Cozy & Affordable Stay</li>
+                            </ul>
+                            <div class="room_card_actions">
+                                <a href="https://www.zotel.ai/hotels/t-hin" target="_blank" rel="noopener" class="main-btn">Book Now</a>
+                                <a href="room-silver.html" class="main-btn btn-outline">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== ROOM TYPES PART ENDS ======-->
+
+    <!--====== FACILITIES PART START ======-->
+    <section id="services" class="services_area pt-120 pb-120 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="section_title pb-4">
+                        <span class="sub-title text-warning font-weight-bold text-uppercase">Amenities</span>
+                        <h2 class="title">Property <span>Facilities</span></h2>
+                        <p>Comfort-first stay essentials for every guest</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="facilities_grid">
+                <div class="facility_card">
+                    <i class="facility_icon fas fa-battery-full"></i>
+                    <span>Power Backup</span>
+                </div>
+                <div class="facility_card">
+                    <i class="facility_icon fas fa-clock"></i>
+                    <span>24-Hour Front Desk</span>
+                </div>
+                <div class="facility_card">
+                    <i class="facility_icon fas fa-shield-alt"></i>
+                    <span>24-Hour Security</span>
+                </div>
+                <div class="facility_card">
+                    <i class="facility_icon fas fa-wind"></i>
+                    <span>Air Conditioning</span>
+                </div>
+                <div class="facility_card">
+                    <i class="facility_icon fas fa-video"></i>
+                    <span>CCTV in Common Areas</span>
+                </div>
+                <div class="facility_card">
+                    <i class="facility_icon fas fa-utensils"></i>
+                    <span>Dining Area</span>
+                </div>
+                <div class="facility_card">
+                    <i class="facility_icon fas fa-home"></i>
+                    <span>Family Rooms</span>
+                </div>
+                <div class="facility_card">
+                    <i class="facility_icon fas fa-users"></i>
+                    <span>Family-Friendly</span>
+                </div>
+                <div class="facility_card">
+                    <i class="facility_icon fas fa-tv"></i>
+                    <span>Flat-Screen TV</span>
+                </div>
+                <div class="facility_card">
+                    <i class="facility_icon fas fa-parking"></i>
+                    <span>Free Car Parking</span>
+                </div>
+                <div class="facility_card">
+                    <i class="facility_icon fas fa-wifi"></i>
+                    <span>Free High-Speed Wi-Fi</span>
+                </div>
+                <div class="facility_card">
+                    <i class="facility_icon fas fa-broom"></i>
+                    <span>Daily Housekeeping</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== FACILITIES PART ENDS ======-->
+
+    <!--====== GALLERY BENTO PART START ======-->
+    <section id="gallery" class="pt-120 pb-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="section_title pb-4">
+                        <span class="sub-title text-warning font-weight-bold text-uppercase">Photo Showcase</span>
+                        <h2 class="title">A Glimpse of <span>T & H Inn</span></h2>
+                        <p>A curated look at spaces, room details, and atmosphere</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery_bento_grid">
+                <!-- Block 1 -->
+                <button type="button" class="gallery_bento_item wide" data-src="assets/images/room-silver-2.jpg">
+                    <img src="assets/images/room-silver-2.jpg" alt="T & H Inn Interior">
+                </button>
+                <button type="button" class="gallery_bento_item tall" data-src="assets/images/room-gold-1.jpg">
+                    <img src="assets/images/room-gold-1.jpg" alt="Gold Room Space">
+                </button>
+                <button type="button" class="gallery_bento_item" data-src="assets/images/room-silver-1.jpg">
+                    <img src="assets/images/room-silver-1.jpg" alt="Silver Room Comfort">
+                </button>
+                <button type="button" class="gallery_bento_item wide" data-src="assets/images/about-main.jpg">
+                    <img src="assets/images/about-main.jpg" alt="Property Entrance View">
+                </button>
+                <button type="button" class="gallery_bento_item" data-src="assets/images/about-inset.jpg">
+                    <img src="assets/images/about-inset.jpg" alt="Guest Balcony View">
+                </button>
+
+                <!-- Block 2 -->
+                <button type="button" class="gallery_bento_item tall" data-src="assets/images/room-diamond-1.jpg">
+                    <img src="assets/images/room-diamond-1.jpg" alt="Diamond Suite">
+                </button>
+                <button type="button" class="gallery_bento_item wide" data-src="assets/images/hero-1.jpg">
+                    <img src="assets/images/hero-1.jpg" alt="Property Overview">
+                </button>
+                <button type="button" class="gallery_bento_item" data-src="assets/images/room-gold-2.jpg">
+                    <img src="assets/images/room-gold-2.jpg" alt="Room Living Area">
+                </button>
+                <button type="button" class="gallery_bento_item wide" data-src="assets/images/room-diamond-2.jpg">
+                    <img src="assets/images/room-diamond-2.jpg" alt="Diamond Bedroom Detail">
+                </button>
+                <button type="button" class="gallery_bento_item" data-src="assets/images/hero-2.jpg">
+                    <img src="assets/images/hero-2.jpg" alt="Guest Ambiance">
+                </button>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="gallery.html" class="main-btn">View All Photos</a>
+            </div>
+        </div>
+    </section>
+    <!--====== GALLERY BENTO PART ENDS ======-->
+
+    <!--====== NEARBY ATTRACTIONS PART START ======-->
+    <section class="pt-120 pb-120 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="section_title pb-4">
+                        <span class="sub-title text-warning font-weight-bold text-uppercase">Location Highlights</span>
+                        <h2 class="title">Nearby <span>Attractions</span></h2>
+                        <p>Popular places guests can easily explore around T & H Inn in Kochi</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nearby_cards_grid">
+                <div class="nearby_card">
+                    <img src="assets/images/nearby-marine-drive.jpg" alt="Marine Drive Promenade" class="nearby_card_img">
+                    <div class="nearby_card_content">
+                        <h3 class="nearby_card_title">Marine Drive Promenade</h3>
+                        <p class="nearby_card_desc">Scenic waterfront walkway along backwaters with shops and sunset views.</p>
+                        <span class="nearby_card_dist"><i class="fas fa-map-marker-alt mr-1"></i> 2.2 km away</span>
+                    </div>
+                </div>
+
+                <div class="nearby_card">
+                    <img src="assets/images/nearby-st-francis.jpg" alt="St. Francis Church" class="nearby_card_img">
+                    <div class="nearby_card_content">
+                        <h3 class="nearby_card_title">St. Francis Church</h3>
+                        <p class="nearby_card_desc">Historic 16th-century church where Vasco da Gama was once buried.</p>
+                        <span class="nearby_card_dist"><i class="fas fa-map-marker-alt mr-1"></i> 3.5 km away</span>
+                    </div>
+                </div>
+
+                <div class="nearby_card">
+                    <img src="assets/images/nearby-lulu-mall.jpg" alt="Lulu Mall Kochi" class="nearby_card_img">
+                    <div class="nearby_card_content">
+                        <h3 class="nearby_card_title">Lulu Mall Kochi</h3>
+                        <p class="nearby_card_desc">Large shopping mall with international brands, food court and cinema.</p>
+                        <span class="nearby_card_dist"><i class="fas fa-map-marker-alt mr-1"></i> 10.8 km away</span>
+                    </div>
+                </div>
+
+                <div class="nearby_card">
+                    <img src="assets/images/nearby-high-court.png" alt="High Court of Kerala" class="nearby_card_img">
+                    <div class="nearby_card_content">
+                        <h3 class="nearby_card_title">High Court of Kerala</h3>
+                        <p class="nearby_card_desc">Prominent legal complex housed in a distinct colonial-era building.</p>
+                        <span class="nearby_card_dist"><i class="fas fa-map-marker-alt mr-1"></i> 1.6 km away</span>
+                    </div>
+                </div>
+
+                <div class="nearby_card">
+                    <img src="assets/images/nearby-dutch-palace.jpg" alt="Mattancherry Palace" class="nearby_card_img">
+                    <div class="nearby_card_content">
+                        <h3 class="nearby_card_title">Mattancherry Palace</h3>
+                        <p class="nearby_card_desc">Royal palace with Kerala murals and artifacts from the Portuguese era.</p>
+                        <span class="nearby_card_dist"><i class="fas fa-map-marker-alt mr-1"></i> 6.4 km away</span>
+                    </div>
+                </div>
+
+                <div class="nearby_card">
+                    <img src="assets/images/nearby-railway-station.jpg" alt="Ernakulam Town Railway Station" class="nearby_card_img">
+                    <div class="nearby_card_content">
+                        <h3 class="nearby_card_title">Ernakulam Railway Station</h3>
+                        <p class="nearby_card_desc">Major rail hub with frequent services across Kerala and southern India.</p>
+                        <span class="nearby_card_dist"><i class="fas fa-map-marker-alt mr-1"></i> 1.1 km away</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== NEARBY ATTRACTIONS PART ENDS ======-->
+
+    <!--====== FAQ SECTION START ======-->
+    <section class="pt-120 pb-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="section_title pb-4">
+                        <span class="sub-title text-warning font-weight-bold text-uppercase">Helpful Info</span>
+                        <h2 class="title">Frequently Asked <span>Questions</span></h2>
+                        <p>Quick answers to assist your stay planning</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="faq_accordion">
+                        <div class="faq_item">
+                            <button type="button" class="faq_question">
+                                <span>What are the check-in and check-out times?</span>
+                                <span class="faq_icon">+</span>
+                            </button>
+                            <div class="faq_answer" style="display: none;">
+                                Check-in is from 01:00 PM onwards, and check-out is by 11:00 AM.
+                            </div>
+                        </div>
+
+                        <div class="faq_item">
+                            <button type="button" class="faq_question">
+                                <span>Where is the property located?</span>
+                                <span class="faq_icon">+</span>
+                            </button>
+                            <div class="faq_answer" style="display: none;">
+                                T & H Inn is located at Meenchira Road, Ponekkara, Edappally, Ernakulam, Kochi, Kerala 682041, India.
+                            </div>
+                        </div>
+
+                        <div class="faq_item">
+                            <button type="button" class="faq_question">
+                                <span>Are children counted as adults for booking?</span>
+                                <span class="faq_icon">+</span>
+                            </button>
+                            <div class="faq_answer" style="display: none;">
+                                Two children above the age of 6 up to 12 years will be considered as one adult.
+                            </div>
+                        </div>
+
+                        <div class="faq_item">
+                            <button type="button" class="faq_question">
+                                <span>Is alcohol allowed on the property?</span>
+                                <span class="faq_icon">+</span>
+                            </button>
+                            <div class="faq_answer" style="display: none;">
+                                Alcohol is allowed inside rooms if consumed responsibly. The homestay does not supply alcohol and guests are advised to respect neighbors and avoid excessive noise.
+                            </div>
+                        </div>
+
+                        <div class="faq_item">
+                            <button type="button" class="faq_question">
+                                <span>Are pets allowed at the property?</span>
+                                <span class="faq_icon">+</span>
+                            </button>
+                            <div class="faq_answer" style="display: none;">
+                                Pets are not allowed on the property.
+                            </div>
+                        </div>
+
+                        <div class="faq_item">
+                            <button type="button" class="faq_question">
+                                <span>Is car parking available?</span>
+                                <span class="faq_icon">+</span>
+                            </button>
+                            <div class="faq_answer" style="display: none;">
+                                Yes, dedicated free car parking facilities are available on-site for guests.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== FAQ SECTION ENDS ======-->
+
+    <!--====== CONTACT PART START ======-->
+    <section id="contact" class="contact_area pt-120 pb-120 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <div class="section_title pb-4">
+                        <span class="sub-title text-warning font-weight-bold text-uppercase">Connect With Us</span>
+                        <h2 class="title">Get in <span>Touch</span></h2>
+                        <p>We are here to help you plan a comfortable stay at T & H Inn</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="bg-white p-4 rounded shadow-sm border">
+                        <h4 class="mb-3 text-dark">Contact Information</h4>
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-map-marker-alt text-warning mt-1 mr-3 font-size-20"></i>
+                            <div>
+                                <strong>Address</strong>
+                                <p class="small text-muted mb-0">Meenchira Road, Ponekkara, Edappally, Ernakulam, Kochi, Kerala 682041, India</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-phone-alt text-warning mt-1 mr-3 font-size-20"></i>
+                            <div>
+                                <strong>Phone / Inquiry</strong>
+                                <p class="small text-muted mb-0"><a href="tel:+919207752244" class="text-dark">+91 92077 52244</a></p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="fab fa-whatsapp text-success mt-1 mr-3 font-size-20"></i>
+                            <div>
+                                <strong>WhatsApp Chat</strong>
+                                <p class="small text-muted mb-0"><a href="https://wa.me/919207752244" target="_blank" rel="noopener" class="text-dark">Chat directly on WhatsApp</a></p>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <i class="fas fa-vr-cardboard text-warning mt-1 mr-3 font-size-20"></i>
+                            <div>
+                                <strong>360° Virtual Tour</strong>
+                                <p class="small text-muted mb-0"><a href="360-view.html" class="text-warning font-weight-bold">View 360° Interactive Tour &rarr;</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="contact_form bg-white p-4 rounded shadow-sm border">
+                        <div id="contact-alert" class="alert alert-success d-none mb-3" role="alert"></div>
+                        <form action="javascript:void(0);" method="POST" id="contact-form" onsubmit="event.preventDefault(); return false;">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="single_form mb-3">
+                                        <input type="text" name="name" id="name" placeholder="Your Name" required class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="single_form mb-3">
+                                        <input type="text" name="phone" id="phone" placeholder="Phone Number" required class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="single_form mb-3">
+                                        <input type="email" name="email" id="email" placeholder="Email Address" required class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="single_form mb-3">
+                                        <textarea name="message" id="message" placeholder="Your Inquiry or Booking Dates" rows="4" required class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="single_form">
+                                        <button type="submit" class="main-btn">Send Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== CONTACT PART ENDS ======-->
+
+    <!--====== FOOTER PART START ======-->
+    <section id="footer" class="footer_area bg-dark text-white">
+        <div class="footer_widget pt-80 pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer_about mt-30">
+                            <a href="index.html"><img src="assets/images/logo.png" alt="T & H Inn Logo" style="max-height: 50px; width: auto;"></a>
+                            <p class="text-muted mt-3">T & H Inn offers 10 comfortable rooms in Edappally, Ernakulam, with Diamond, Gold, and Silver room categories equipped with modern amenities and a peaceful stay atmosphere.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer_link mt-30 w-100">
+                            <h4 class="footer_title text-white mb-3">Quick Navigation</h4>
+                            <ul class="link list-unstyled">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Property</a></li>
+                                <li><a href="rooms.html">Rooms Catalog</a></li>
+                                <li><a href="gallery.html">Photo Gallery</a></li>
+                                <li><a href="360-view.html">360° Virtual Tour</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="booking.html">Room Booking</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer_subscribe mt-30">
+                            <h4 class="footer_title text-white mb-3">Location & Booking</h4>
+                            <p class="text-muted">Meenchira Road, Ponekkara, Edappally, Ernakulam, Kochi, Kerala 682041</p>
+                            <a href="booking.html" class="main-btn mt-2">Book Room Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-muted small mt-5 mb-0">&copy; 2026 T & H Inn. All Rights Reserved.</p>
+        </div>
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+
+    <!-- Lightbox Modal Container -->
+    <div id="gallery_lightbox" class="lightbox_modal">
+        <span class="lightbox_close">&times;</span>
+        <span class="lightbox_nav prev">&#8249;</span>
+        <span class="lightbox_nav next">&#8250;</span>
+        <div class="lightbox_img_wrap">
+            <img id="lightbox_img" src="" alt="Gallery Full View">
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Action Button -->
+    <a href="https://wa.me/919207752244" target="_blank" rel="noopener" class="whatsapp_float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to top -->
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+    <!--====== Jquery js ======-->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.4.5.2.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/scrolling-nav.js"></script>
+    <!--====== Counter Up js ======-->
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!--====== Nice Select js ======-->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!--====== WOW js ======-->
+    <script src="assets/js/wow.min.js"></script>
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#contact-form').on('submit', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                var $form = $(this);
+                var name = $('#name').val() ? $('#name').val().trim() : '';
+                var phone = $('#phone').val() ? $('#phone').val().trim() : '';
+                var email = $('#email').val() ? $('#email').val().trim() : '';
+                var message = $('#message').val() ? $('#message').val().trim() : '';
+
+                var waMessage = "*New Contact Inquiry - T & H Inn*\n\n" +
+                    "👤 *Name:* " + name + "\n" +
+                    "📞 *Phone:* " + phone + "\n" +
+                    "✉️ *Email:* " + email + "\n" +
+                    "📝 *Message:* " + message;
+
+                var waUrl = "https://wa.me/919207752244?text=" + encodeURIComponent(waMessage);
+
+                fetch('https://formspree.io/f/xrpgjowe', {
+                    method: 'POST',
+                    body: new FormData($form[0]),
+                    headers: { 'Accept': 'application/json' }
+                }).catch(function(err) {
+                    console.log('Formspree error:', err);
+                });
+
+                $('#contact-alert').removeClass('d-none').html(
+                    '<strong>Thank you, ' + name + '!</strong> Your message has been sent. Our front desk manager will contact you shortly. ' +
+                    '<br><a href="' + waUrl + '" target="_blank" rel="noopener" class="btn btn-sm btn-success font-weight-bold mt-2"><i class="fab fa-whatsapp mr-1"></i> Open WhatsApp Chat</a>'
+                );
+
+                try {
+                    window.open(waUrl, '_blank');
+                } catch(err) {
+                    console.log('WhatsApp open:', err);
+                }
+
+                $form[0].reset();
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>
