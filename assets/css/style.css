@@ -1624,18 +1624,19 @@ p {
 }
 
 .single_form {
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .single_form input,
 .single_form textarea {
   width: 100%;
-  height: 60px;
-  padding: 0 25px;
-  border: 2px solid #DBDBDB;
-  border-radius: 50px;
+  height: 44px;
+  padding: 0 18px;
+  font-size: 14px;
+  border: 1.5px solid #DBDBDB;
+  border-radius: 22px;
   background-color: #fff;
-  color: #747E88;
+  color: #495057;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
@@ -1643,59 +1644,66 @@ p {
 .single_form input::-webkit-input-placeholder,
 .single_form textarea::-webkit-input-placeholder {
   opacity: 1;
-  color: #DBDBDB;
+  color: #999;
 }
 
 .single_form input:-ms-input-placeholder,
 .single_form textarea:-ms-input-placeholder {
   opacity: 1;
-  color: #DBDBDB;
+  color: #999;
 }
 
 .single_form input::-ms-input-placeholder,
 .single_form textarea::-ms-input-placeholder {
   opacity: 1;
-  color: #DBDBDB;
+  color: #999;
 }
 
 .single_form input::placeholder,
 .single_form textarea::placeholder {
   opacity: 1;
-  color: #DBDBDB;
+  color: #999;
 }
 
 .single_form input::-moz-placeholder,
 .single_form textarea::-moz-placeholder {
   opacity: 1;
-  color: #DBDBDB;
-}
-
-.single_form input::-moz-placeholder,
-.single_form textarea::-moz-placeholder {
-  opacity: 1;
-  color: #DBDBDB;
-}
-
-.single_form input::-webkit-input-placeholder,
-.single_form textarea::-webkit-input-placeholder {
-  opacity: 1;
-  color: #DBDBDB;
+  color: #999;
 }
 
 .single_form input:focus,
 .single_form textarea:focus {
   border-color: #D48B14;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(212, 139, 20, 0.15);
 }
 
 .single_form textarea {
-  height: 230px;
-  padding-top: 15px;
-  border-radius: 25px;
+  height: 105px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 14px;
   resize: none;
 }
 
 .single_form .main-btn {
   border-radius: 50px;
+  padding: 0 28px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px;
+}
+
+.contact_map_box {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+.contact_map_box iframe {
+  width: 100%;
+  height: 240px;
+  border: 0;
+  display: block;
 }
 
 .single_form .main-btn:hover {

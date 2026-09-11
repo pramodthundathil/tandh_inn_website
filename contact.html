@@ -66,69 +66,73 @@
     <!-- Contact Form & Details -->
     <section class="py-5 bg-light">
         <div class="container py-4">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-5 mb-4 mb-lg-0">
-                    <div class="bg-white p-4 rounded shadow-sm border">
-                        <h4 class="mb-4 text-dark font-weight-bold">Contact Details</h4>
-                        <div class="d-flex mb-4">
-                            <i class="fas fa-map-marker-alt text-warning mt-1 mr-3 font-size-24"></i>
+            <div class="row align-items-stretch">
+                <div class="col-lg-5 mb-4 mb-lg-0 d-flex flex-column justify-content-between">
+                    <div class="bg-white p-3 p-md-4 rounded shadow-sm border mb-3">
+                        <h5 class="mb-3 text-dark font-weight-bold">Contact Details</h5>
+                        <div class="d-flex mb-2">
+                            <i class="fas fa-map-marker-alt text-warning mt-1 mr-3 font-size-18"></i>
                             <div>
-                                <h6 class="mb-1 text-dark">Location Address</h6>
+                                <strong class="small text-dark">Location Address</strong>
                                 <p class="small text-muted mb-0">Meenchira Road, Ponekkara, Edappally, Ernakulam, Kochi, Kerala 682041, India</p>
                             </div>
                         </div>
-                        <div class="d-flex mb-4">
-                            <i class="fas fa-phone-alt text-warning mt-1 mr-3 font-size-24"></i>
+                        <div class="d-flex mb-2">
+                            <i class="fas fa-phone-alt text-warning mt-1 mr-3 font-size-18"></i>
                             <div>
-                                <h6 class="mb-1 text-dark">Phone Number</h6>
+                                <strong class="small text-dark">Phone Number</strong>
                                 <p class="small text-muted mb-0"><a href="tel:+919207752244" class="text-dark font-weight-bold">+91 92077 52244</a></p>
                             </div>
                         </div>
-                        <div class="d-flex mb-4">
-                            <i class="fab fa-whatsapp text-success mt-1 mr-3 font-size-24"></i>
+                        <div class="d-flex mb-2">
+                            <i class="fab fa-whatsapp text-success mt-1 mr-3 font-size-18"></i>
                             <div>
-                                <h6 class="mb-1 text-dark">Instant WhatsApp</h6>
+                                <strong class="small text-dark">Instant WhatsApp</strong>
                                 <p class="small text-muted mb-0"><a href="https://wa.me/919207752244" target="_blank" rel="noopener" class="text-success font-weight-bold">Click here to start chat &rarr;</a></p>
                             </div>
                         </div>
                         <div class="d-flex">
-                            <i class="fas fa-vr-cardboard text-warning mt-1 mr-3 font-size-24"></i>
+                            <i class="fas fa-vr-cardboard text-warning mt-1 mr-3 font-size-18"></i>
                             <div>
-                                <h6 class="mb-1 text-dark">360° Virtual Tour</h6>
+                                <strong class="small text-dark">360° Virtual Tour</strong>
                                 <p class="small text-muted mb-0"><a href="360-view.html" class="text-warning font-weight-bold">Open 360° Interactive Tour &rarr;</a></p>
                             </div>
                         </div>
                     </div>
+
+                    <div class="contact_map_box shadow-sm border rounded bg-white flex-grow-1">
+                        <iframe src="https://maps.google.com/maps?q=10.028611,76.297546&z=16&output=embed" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="T & H Inn Location Map"></iframe>
+                    </div>
                 </div>
 
                 <div class="col-lg-7">
-                    <div class="contact_form bg-white p-4 rounded shadow-sm border">
-                        <h4 class="mb-3 text-dark font-weight-bold">Send Us a Message</h4>
+                    <div class="contact_form bg-white p-3 p-md-4 rounded shadow-sm border h-100 d-flex flex-column justify-content-center">
+                        <h5 class="mb-3 text-dark font-weight-bold">Send Us a Message</h5>
                         <div id="contact-alert" class="alert alert-success d-none mb-3" role="alert"></div>
                         <form action="https://formspree.io/f/xrpgjowe" method="POST" id="contact-form">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <div class="single_form mb-3">
-                                        <input type="text" name="name" id="name" placeholder="Your Name" required class="form-control">
+                                    <div class="single_form mb-2">
+                                        <input type="text" name="name" id="name" placeholder="Your Name" required class="form-control form-control-sm">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="single_form mb-3">
-                                        <input type="text" name="phone" id="phone" placeholder="Phone Number" required class="form-control">
+                                    <div class="single_form mb-2">
+                                        <input type="text" name="phone" id="phone" placeholder="Phone Number" required class="form-control form-control-sm">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
-                                    <div class="single_form mb-3">
-                                        <input type="email" name="email" id="email" placeholder="Email Address" required class="form-control">
+                                    <div class="single_form mb-2">
+                                        <input type="email" name="email" id="email" placeholder="Email Address" required class="form-control form-control-sm">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
-                                    <div class="single_form mb-3">
-                                        <textarea name="message" id="message" placeholder="Your Inquiry, Check-in / Check-out dates, or questions" rows="5" required class="form-control"></textarea>
+                                    <div class="single_form mb-2">
+                                        <textarea name="message" id="message" placeholder="Your Inquiry, Check-in / Check-out dates, or questions" rows="3" required class="form-control form-control-sm"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
-                                    <div class="single_form">
+                                    <div class="single_form mt-2">
                                         <button type="submit" class="main-btn">Send Message</button>
                                     </div>
                                 </div>
