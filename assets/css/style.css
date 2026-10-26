@@ -2648,6 +2648,53 @@ h1, h2, h3, h4, h5, h6, .hero_caption_title, .title {
   transform: scale(1.08);
 }
 
+.gallery_filter_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.gallery_filter_btn {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.gallery_filter_btn:hover,
+.gallery_filter_btn.active {
+  background: #D48B14;
+  color: #ffffff;
+  border-color: #D48B14;
+  box-shadow: 0 4px 12px rgba(212, 139, 20, 0.3);
+}
+
+.gallery_room_badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  pointer-events: none;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
 /* Lightbox Modal */
 .lightbox_modal {
   position: fixed;

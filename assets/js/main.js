@@ -222,32 +222,37 @@ $(function() {
         });
     })();
 
-    //===== Lightbox Modal Gallery
+    //===== Lightbox Modal Gallery & Category Filter
     (function initLightbox() {
         var $modal = $('#gallery_lightbox');
         var $modalImg = $('#lightbox_img');
         var galleryImages = [];
         var currentIndex = 0;
 
-        $('.gallery_bento_item, [data-lightbox]').each(function(idx) {
-            var src = $(this).data('src') || $(this).find('img').attr('src');
-            if (src) {
-                galleryImages.push(src);
-                $(this).data('gallery-index', idx);
-            }
-        });
+        function refreshGalleryImages() {
+            galleryImages = [];
+            $('.gallery_bento_item:visible, [data-lightbox]:visible').each(function() {
+                var src = $(this).data('src') || $(this).find('img').attr('src') || $(this).attr('src');
+                if (src && galleryImages.indexOf(src) === -1) {
+                    galleryImages.push(src);
+                }
+            });
+        }
 
-        function openLightbox(index) {
-            if (index < 0 || index >= galleryImages.length) return;
-            currentIndex = index;
+        function openLightbox(src) {
+            refreshGalleryImages();
+            if (!galleryImages.length) return;
+            var idx = galleryImages.indexOf(src);
+            currentIndex = idx >= 0 ? idx : 0;
             $modalImg.attr('src', galleryImages[currentIndex]);
             $modal.addClass('is-open');
         }
 
-        $(document).on('click', '.gallery_bento_item, [data-lightbox]', function() {
-            var idx = $(this).data('gallery-index');
-            if (idx !== undefined) {
-                openLightbox(idx);
+        $(document).on('click', '.gallery_bento_item, [data-lightbox]', function(e) {
+            e.preventDefault();
+            var src = $(this).data('src') || $(this).find('img').attr('src') || $(this).attr('src');
+            if (src) {
+                openLightbox(src);
             }
         });
 
@@ -259,12 +264,14 @@ $(function() {
 
         $('.lightbox_nav.prev').on('click', function(e) {
             e.stopPropagation();
+            if (!galleryImages.length) return;
             currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
             $modalImg.attr('src', galleryImages[currentIndex]);
         });
 
         $('.lightbox_nav.next').on('click', function(e) {
             e.stopPropagation();
+            if (!galleryImages.length) return;
             currentIndex = (currentIndex + 1) % galleryImages.length;
             $modalImg.attr('src', galleryImages[currentIndex]);
         });
@@ -274,6 +281,20 @@ $(function() {
             if (e.key === 'Escape') $modal.removeClass('is-open');
             if (e.key === 'ArrowLeft') $('.lightbox_nav.prev').click();
             if (e.key === 'ArrowRight') $('.lightbox_nav.next').click();
+        });
+
+        // Gallery Filter Buttons
+        $(document).on('click', '.gallery_filter_btn', function() {
+            $('.gallery_filter_btn').removeClass('active');
+            $(this).addClass('active');
+            var filter = $(this).data('filter');
+            if (filter === 'all') {
+                $('.gallery_bento_grid .gallery_bento_item').show();
+            } else {
+                $('.gallery_bento_grid .gallery_bento_item').hide();
+                $('.gallery_bento_grid .gallery_bento_item[data-category="' + filter + '"]').show();
+            }
+            refreshGalleryImages();
         });
     })();
 
