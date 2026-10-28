@@ -17,18 +17,46 @@ $(function() {
         setTimeout(hidePreloader, 800);
     }
     
-    //===== Sticky
+    //===== Smart Auto-Hiding Navbar on Scroll Down (Full View of Site)
+    (function initSmartNavbar() {
+        var $navbar = $('.header_navbar');
+        if (!$navbar.length) return;
 
-    $(window).on('scroll', function (event) {
-        var scroll = $(window).scrollTop();
-        if (scroll < 20) {
-            $(".header_navbar").removeClass("sticky");
-            $(".header_navbar img").attr("src", "assets/images/logo.png");
-        } else {
-            $(".header_navbar").addClass("sticky");
-            $(".header_navbar img").attr("src", "assets/images/logo.png");
-        }
-    });
+        var lastScrollTop = 0;
+        var scrollDelta = 8;
+        var topThreshold = 60;
+
+        $(window).on('scroll', function() {
+            var currentScroll = $(window).scrollTop();
+
+            // When at or near the top of the page
+            if (currentScroll <= topThreshold) {
+                $navbar.removeClass('sticky nav-hidden').addClass('nav-visible');
+                lastScrollTop = currentScroll;
+                return;
+            }
+
+            // Require minimum scroll delta to prevent micro-jitter
+            if (Math.abs(currentScroll - lastScrollTop) <= scrollDelta) {
+                return;
+            }
+
+            // Don't auto-hide if mobile menu dropdown is open
+            if ($('.navbar-collapse').hasClass('show')) {
+                return;
+            }
+
+            if (currentScroll > lastScrollTop && currentScroll > topThreshold) {
+                // User is scrolling DOWN -> Hide navbar for full site view
+                $navbar.addClass('sticky nav-hidden').removeClass('nav-visible');
+            } else if (currentScroll < lastScrollTop) {
+                // User is scrolling UP -> Slide navbar back down smoothly
+                $navbar.addClass('sticky nav-visible').removeClass('nav-hidden');
+            }
+
+            lastScrollTop = currentScroll;
+        });
+    })();
     
     //===== Section Menu Active
 
@@ -128,12 +156,14 @@ $(function() {
             $dots.removeClass('is-active').eq(index).addClass('is-active');
             
             if (captions[index] && $title.length) {
-                $title.fadeOut(300, function() {
-                    $(this).text(captions[index].title).fadeIn(300);
-                });
-                $subtitle.fadeOut(300, function() {
-                    $(this).text(captions[index].subtitle).fadeIn(300);
-                });
+                $title.css({ opacity: 0, transform: 'translateY(12px)' });
+                $subtitle.css({ opacity: 0, transform: 'translateY(12px)' });
+                setTimeout(function() {
+                    $title.text(captions[index].title).css({ opacity: 1, transform: 'translateY(0)' });
+                }, 200);
+                setTimeout(function() {
+                    $subtitle.text(captions[index].subtitle).css({ opacity: 1, transform: 'translateY(0)' });
+                }, 300);
             }
         }
 
@@ -142,14 +172,59 @@ $(function() {
             goToSlide(nextIndex);
         }
 
-        slideInterval = setInterval(nextSlide, 4500);
+        slideInterval = setInterval(nextSlide, 5000);
 
         $dots.on('click', function() {
             clearInterval(slideInterval);
             var idx = $(this).data('index');
             goToSlide(idx);
-            slideInterval = setInterval(nextSlide, 4500);
+            slideInterval = setInterval(nextSlide, 5000);
         });
+    })();
+
+    //===== Hero Banner Parallax & On-Scroll Animation
+    (function initHeroScrollAnimation() {
+        var $heroContainer = $('.hero_slider_container');
+        var $heroSlides = $('.hero_slide');
+        var $heroContent = $('.hero_content_wrapper');
+        var $scrollCue = $('.hero_scroll_cue');
+        if (!$heroContainer.length) return;
+
+        var ticking = false;
+
+        function updateOnScroll() {
+            var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+            var heroHeight = $heroContainer.outerHeight();
+
+            if (scrollY <= heroHeight) {
+                // Parallax background drift
+                var bgTranslateY = (scrollY * 0.32).toFixed(1);
+                $heroSlides.css('transform', 'translate3d(0, ' + bgTranslateY + 'px, 0)');
+
+                // Hero content smooth lift and gentle fade
+                var contentTranslateY = -(scrollY * 0.16).toFixed(1);
+                var opacity = Math.max(0, 1 - (scrollY / (heroHeight * 0.72))).toFixed(2);
+                $heroContent.css({
+                    'transform': 'translate3d(0, ' + contentTranslateY + 'px, 0)',
+                    'opacity': opacity
+                });
+
+                // Fade out scroll cue as soon as user begins scrolling
+                if (scrollY > 40) {
+                    $scrollCue.addClass('is_scrolled');
+                } else {
+                    $scrollCue.removeClass('is_scrolled');
+                }
+            }
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(updateOnScroll);
+                ticking = true;
+            }
+        }, { passive: true });
     })();
 
     //===== Date Inputs & Booking Widget
@@ -356,4 +431,108 @@ $(function() {
         });
     });
 
+    //===== Nearby Attractions Full-Width Auto-Scroll Carousel (3-second interval)
+    (function initNearbyScroll() {
+        var $track = $('#nearby_cards_track');
+        var $prev = $('#nearby_prev_btn');
+        var $next = $('#nearby_next_btn');
+        if (!$track.length) return;
+
+        var el = $track[0];
+        var autoScrollTimer = null;
+        var isPaused = false;
+
+        function getCardStep() {
+            var $firstCard = $track.find('.nearby_card').first();
+            return $firstCard.length ? ($firstCard.outerWidth() + 24) : 340;
+        }
+
+        function scrollNext() {
+            var maxScroll = el.scrollWidth - el.clientWidth;
+            var step = getCardStep();
+            if (el.scrollLeft + step >= maxScroll - 15) {
+                // Smooth loop back to the start
+                el.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                el.scrollBy({ left: step, behavior: 'smooth' });
+            }
+        }
+
+        function scrollPrev() {
+            var step = getCardStep();
+            if (el.scrollLeft - step <= 15) {
+                var maxScroll = el.scrollWidth - el.clientWidth;
+                el.scrollTo({ left: maxScroll, behavior: 'smooth' });
+            } else {
+                el.scrollBy({ left: -step, behavior: 'smooth' });
+            }
+        }
+
+        function startAutoScroll() {
+            stopAutoScroll();
+            autoScrollTimer = setInterval(function() {
+                if (!isPaused) {
+                    scrollNext();
+                }
+            }, 3000);
+        }
+
+        function stopAutoScroll() {
+            if (autoScrollTimer) {
+                clearInterval(autoScrollTimer);
+                autoScrollTimer = null;
+            }
+        }
+
+        // Manual Navigation Buttons
+        $next.on('click', function() {
+            scrollNext();
+            startAutoScroll();
+        });
+
+        $prev.on('click', function() {
+            scrollPrev();
+            startAutoScroll();
+        });
+
+        // Pause on mouse hover or touch interaction
+        $track.on('mouseenter touchstart', function() {
+            isPaused = true;
+        }).on('mouseleave touchend', function() {
+            isPaused = false;
+        });
+
+        $('.nearby_carousel_nav').on('mouseenter', function() {
+            isPaused = true;
+        }).on('mouseleave', function() {
+            isPaused = false;
+        });
+
+        // Start 3-second auto-scroll
+        startAutoScroll();
+    })();
+
+    //===== Luxury Facilities Category Filter
+    $('#facilities_filter_nav .facility_filter_btn').on('click', function() {
+        var $btn = $(this);
+        var filter = $btn.data('filter');
+
+        $btn.addClass('active').siblings().removeClass('active');
+
+        var $cards = $('#facilities_grid .facility_card');
+        if (filter === 'all') {
+            $cards.removeClass('is_hidden').addClass('animate_in');
+        } else {
+            $cards.each(function() {
+                var $card = $(this);
+                if ($card.data('category') === filter) {
+                    $card.removeClass('is_hidden').addClass('animate_in');
+                } else {
+                    $card.addClass('is_hidden').removeClass('animate_in');
+                }
+            });
+        }
+    });
+
 });
+
