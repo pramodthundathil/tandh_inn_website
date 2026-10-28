@@ -3032,48 +3032,427 @@ h6,
   }
 }
 
-/* Facilities Section */
-.facilities_grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 14px;
-  margin-top: 24px;
+/* ==========================================================
+   Luxury Property Facilities & Amenities Section Redesign
+   ========================================================== */
+.luxury_amenities_section {
+  position: relative;
+  background: radial-gradient(circle at 10% 15%, rgba(212, 139, 20, 0.04) 0%, transparent 45%),
+              radial-gradient(circle at 90% 85%, rgba(126, 22, 20, 0.04) 0%, transparent 50%),
+              #fbfaf8;
+  overflow: hidden;
 }
 
-@media (min-width: 768px) {
+/* Ambient glow accents */
+.amenities_ambient_glow {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: 0;
+}
+.amenities_ambient_glow.glow_left {
+  top: -100px;
+  left: -150px;
+  background: radial-gradient(circle, rgba(212, 139, 20, 0.12), transparent 70%);
+}
+.amenities_ambient_glow.glow_right {
+  bottom: -100px;
+  right: -150px;
+  background: radial-gradient(circle, rgba(126, 22, 20, 0.1), transparent 70%);
+}
+
+.luxury_amenities_section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Header Badge & Subtitle */
+.amenities_badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 18px;
+  border-radius: 50px;
+  background: rgba(126, 22, 20, 0.07);
+  border: 1px solid rgba(212, 139, 20, 0.35);
+  color: #7E1614;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 10px rgba(126, 22, 20, 0.06);
+}
+.amenities_badge i {
+  color: #D48B14;
+}
+
+.amenities_subtitle {
+  font-size: 16px;
+  color: #64748b;
+  max-width: 620px;
+  margin: 10px auto 0;
+  line-height: 1.6;
+}
+
+/* Category Filter Navigation */
+.facilities_filter_nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+.facility_filter_btn {
+  background: #ffffff;
+  border: 1px solid rgba(226, 188, 152, 0.45);
+  color: #475569;
+  padding: 9px 20px;
+  border-radius: 50px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  display: inline-flex;
+  align-items: center;
+  outline: none;
+}
+.facility_filter_btn i {
+  color: #D48B14;
+  transition: color 0.3s ease;
+}
+.facility_filter_btn .filter_count {
+  display: inline-block;
+  background: rgba(212, 139, 20, 0.15);
+  color: #9c6208;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-left: 6px;
+  transition: all 0.3s ease;
+}
+.facility_filter_btn:hover {
+  border-color: #D48B14;
+  color: #7E1614;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(212, 139, 20, 0.18);
+}
+.facility_filter_btn.active {
+  background: linear-gradient(135deg, #7E1614 0%, #540c0b 100%);
+  color: #ffffff;
+  border-color: #7E1614;
+  box-shadow: 0 6px 20px rgba(126, 22, 20, 0.28);
+}
+.facility_filter_btn.active i {
+  color: #E2BC98;
+}
+.facility_filter_btn.active .filter_count {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* Facilities Modern Luxury Grid */
+.facilities_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-top: 36px;
+}
+
+@media (max-width: 1199px) {
   .facilities_grid {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .facilities_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+@media (max-width: 575px) {
+  .facilities_grid {
+    grid-template-columns: 1fr;
     gap: 16px;
   }
 }
 
+/* Individual Luxury Facility Card */
 .facility_card {
+  position: relative;
   background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 16px 12px;
-  text-align: center;
-  transition: all 0.3s ease;
+  border: 1px solid rgba(226, 188, 152, 0.35);
+  border-radius: 18px;
+  padding: 26px 22px 22px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease,
+              opacity 0.35s ease;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+}
+
+/* Shimmer light sweep on hover */
+.facility_card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.85), transparent);
+  transform: skewX(-25deg);
+  transition: left 0.75s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.facility_card:hover::before {
+  left: 160%;
 }
 
 .facility_card:hover {
-  transform: translateY(-4px);
-  border-color: #D48B14;
-  box-shadow: 0 10px 25px rgba(212, 139, 20, 0.15);
+  transform: translateY(-8px) scale(1.015);
+  border-color: rgba(212, 139, 20, 0.55);
+  box-shadow: 0 20px 38px -10px rgba(126, 22, 20, 0.14),
+              0 8px 18px -4px rgba(212, 139, 20, 0.12);
+}
+
+/* Hidden state for category filtering */
+.facility_card.is_hidden {
+  display: none !important;
+}
+
+.facility_card.animate_in {
+  animation: facilityCardFadeIn 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes facilityCardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Card Top Corner Badge */
+.facility_card_badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 30px;
+  background: rgba(212, 139, 20, 0.09);
+  color: #9c6208;
+  border: 1px solid rgba(212, 139, 20, 0.22);
+  transition: all 0.35s ease;
+  z-index: 1;
+}
+.facility_card:hover .facility_card_badge {
+  background: #7E1614;
+  color: #ffffff;
+  border-color: #7E1614;
+  box-shadow: 0 2px 8px rgba(126, 22, 20, 0.25);
+}
+
+/* Facility Icon Capsule & Halo */
+.facility_icon_wrapper {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(212, 139, 20, 0.12), rgba(126, 22, 20, 0.08));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 1;
+}
+
+.facility_icon_halo {
+  position: absolute;
+  inset: -4px;
+  border-radius: 18px;
+  border: 1.5px dashed rgba(212, 139, 20, 0.35);
+  opacity: 0;
+  transform: scale(0.85) rotate(0deg);
+  transition: all 0.4s ease;
 }
 
 .facility_icon {
-  font-size: 26px;
-  color: #D48B14;
-  margin-bottom: 8px;
-  display: block;
+  font-size: 24px;
+  color: #7E1614;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.facility_card span {
-  font-size: 13px;
-  font-weight: 600;
-  color: #1e293b;
+.facility_card:hover .facility_icon_wrapper {
+  background: linear-gradient(135deg, #7E1614 0%, #530d0b 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(126, 22, 20, 0.28);
 }
+.facility_card:hover .facility_icon_halo {
+  opacity: 1;
+  transform: scale(1.08) rotate(45deg);
+  border-color: rgba(212, 139, 20, 0.7);
+}
+.facility_card:hover .facility_icon {
+  color: #ffffff !important;
+  transform: scale(1.15) rotate(4deg);
+}
+
+/* Facility Title & Description */
+.facility_name {
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 6px;
+  line-height: 1.35;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+.facility_card:hover .facility_name {
+  color: #7E1614;
+}
+
+.facility_desc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #64748b;
+  margin-bottom: 0;
+  z-index: 1;
+}
+
+/* Bottom Hairline Glow Accent */
+.facility_card_glow_line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #D48B14, #7E1614);
+  transition: width 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.facility_card:hover .facility_card_glow_line {
+  width: 100%;
+}
+
+/* Concierge Assistance Banner */
+.facilities_help_banner {
+  margin-top: 45px;
+  position: relative;
+  z-index: 1;
+}
+.help_banner_inner {
+  background: linear-gradient(135deg, #ffffff 0%, #fcf9f5 100%);
+  border: 1px solid rgba(226, 188, 152, 0.45);
+  border-radius: 18px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.help_banner_inner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(126, 22, 20, 0.08);
+  border-color: rgba(212, 139, 20, 0.45);
+}
+
+.help_icon_box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(212, 139, 20, 0.15), rgba(126, 22, 20, 0.08));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.help_icon_box i {
+  font-size: 24px;
+  color: #7E1614;
+}
+
+.help_text {
+  flex-grow: 1;
+}
+.help_text h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+.help_text p {
+  font-size: 13.5px;
+  color: #64748b;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.help_cta {
+  flex-shrink: 0;
+}
+.help_btn {
+  background: linear-gradient(135deg, #25D366, #128C7E) !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 10px 22px !important;
+  border-radius: 50px !important;
+  font-size: 14px !important;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+.help_btn:hover {
+  background: linear-gradient(135deg, #1ebe5d, #0e7065) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45) !important;
+}
+
+@media (max-width: 767px) {
+  .help_banner_inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 20px;
+    gap: 16px;
+  }
+  .help_icon_box {
+    margin: 0 auto;
+  }
+  .help_cta {
+    width: 100%;
+  }
+  .help_btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 
 /* Room Cards Grid */
 .room_card_item {
@@ -4280,13 +4659,13 @@ a:focus {
 }
 
 .facility_card:hover {
-  border-color: #7E1614 !important;
-  box-shadow: 0 10px 25px rgba(53, 6, 3, 0.16) !important;
+  border-color: #7E1614;
 }
 
 .facility_icon {
-  color: #7E1614 !important;
+  color: #7E1614;
 }
+
 
 .room_card_item:hover {
   border-color: #E2BC98;

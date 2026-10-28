@@ -512,4 +512,27 @@ $(function() {
         startAutoScroll();
     })();
 
+    //===== Luxury Facilities Category Filter
+    $('#facilities_filter_nav .facility_filter_btn').on('click', function() {
+        var $btn = $(this);
+        var filter = $btn.data('filter');
+
+        $btn.addClass('active').siblings().removeClass('active');
+
+        var $cards = $('#facilities_grid .facility_card');
+        if (filter === 'all') {
+            $cards.removeClass('is_hidden').addClass('animate_in');
+        } else {
+            $cards.each(function() {
+                var $card = $(this);
+                if ($card.data('category') === filter) {
+                    $card.removeClass('is_hidden').addClass('animate_in');
+                } else {
+                    $card.addClass('is_hidden').removeClass('animate_in');
+                }
+            });
+        }
+    });
+
 });
+

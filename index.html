@@ -50,7 +50,7 @@
     <!--====== Default CSS ======-->
     <link rel="stylesheet" href="assets/css/default.css">
     <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="assets/css/style.css?v=3.7">
+    <link rel="stylesheet" href="assets/css/style.css?v=3.8">
 
     <!--====== JSON-LD Structured Data Schema ======-->
     <script type="application/ld+json">
@@ -167,7 +167,7 @@
                 <!-- Eyebrow Badges -->
                 <div class="hero_eyebrow_wrapper">
                     <span class="hero_rating_badge">
-                        <i class="fas fa-star text-warning"></i> 4.8 / 5 Guest Favorite
+                        <i class="fas fa-star text-warning"></i> Guest Favorite
                     </span>
                     <span class="hero_location_badge">
                         <i class="fas fa-map-marker-alt text-warning"></i> Edappally, Kochi
@@ -175,7 +175,8 @@
                 </div>
 
                 <h1 id="hero_title" class="hero_caption_title">A Homely Base in Edappally</h1>
-                <p id="hero_subtitle" class="hero_caption_subtitle">Comfortable Diamond, Gold, and Silver rooms for families, couples, and groups in Ernakulam.</p>
+                <p id="hero_subtitle" class="hero_caption_subtitle">Comfortable Diamond, Gold, and Silver rooms for
+                    families, couples, and groups in Ernakulam.</p>
 
                 <!-- Amenities Quick Highlights -->
                 <div class="hero_amenities_strip">
@@ -387,66 +388,201 @@
     <!--====== ROOM TYPES PART ENDS ======-->
 
     <!--====== FACILITIES PART START ======-->
-    <section id="services" class="services_area pt-120 pb-120 bg-light">
+    <section id="services" class="services_area pt-120 pb-120 luxury_amenities_section">
+        <!-- Ambient Decorative Glows -->
+        <div class="amenities_ambient_glow glow_left"></div>
+        <div class="amenities_ambient_glow glow_right"></div>
+
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
                     <div class="section_title pb-4">
-                        <span class="sub-title text-warning font-weight-bold text-uppercase">Amenities</span>
+                        <div class="amenities_badge">
+                            <i class="fas fa-gem mr-1"></i> Amenities & Facilities
+                        </div>
                         <h2 class="title">Property <span>Facilities</span></h2>
-                        <p>Comfort-first stay essentials for every guest</p>
+                        <p class="amenities_subtitle">Comfort-first stay essentials for every guest, curated for relaxed living and peace of mind</p>
+                    </div>
+
+                    <!-- Category Filter Navigation -->
+                    <div class="facilities_filter_nav" id="facilities_filter_nav">
+                        <button type="button" class="facility_filter_btn active" data-filter="all">
+                            <i class="fas fa-th-large mr-1"></i> All Essentials <span class="filter_count">12</span>
+                        </button>
+                        <button type="button" class="facility_filter_btn" data-filter="comfort">
+                            <i class="fas fa-bed mr-1"></i> Room Comforts
+                        </button>
+                        <button type="button" class="facility_filter_btn" data-filter="safety">
+                            <i class="fas fa-shield-alt mr-1"></i> Safety & Front Desk
+                        </button>
+                        <button type="button" class="facility_filter_btn" data-filter="convenience">
+                            <i class="fas fa-wifi mr-1"></i> Connectivity & Perks
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <div class="facilities_grid">
-                <div class="facility_card">
-                    <i class="facility_icon fas fa-battery-full"></i>
-                    <span>Power Backup</span>
+            <div class="facilities_grid" id="facilities_grid">
+                <!-- Card 1: Power Backup -->
+                <div class="facility_card" data-category="safety">
+                    <span class="facility_card_badge">Always Active</span>
+                    <div class="facility_icon_wrapper">
+                        <div class="facility_icon_halo"></div>
+                        <i class="facility_icon fas fa-bolt"></i>
+                    </div>
+                    <h3 class="facility_name">24/7 Power Backup</h3>
+                    <p class="facility_desc">Uninterrupted lighting & power continuity with automatic silent generator backup.</p>
+                    <div class="facility_card_glow_line"></div>
                 </div>
-                <div class="facility_card">
-                    <i class="facility_icon fas fa-clock"></i>
-                    <span>24-Hour Front Desk</span>
+
+                <!-- Card 2: 24-Hour Front Desk -->
+                <div class="facility_card" data-category="safety">
+                    <span class="facility_card_badge">24/7 Available</span>
+                    <div class="facility_icon_wrapper">
+                        <div class="facility_icon_halo"></div>
+                        <i class="facility_icon fas fa-clock"></i>
+                    </div>
+                    <h3 class="facility_name">24-Hour Front Desk</h3>
+                    <p class="facility_desc">Warm concierge assistance, express check-in, and luggage care around the clock.</p>
+                    <div class="facility_card_glow_line"></div>
                 </div>
-                <div class="facility_card">
-                    <i class="facility_icon fas fa-shield-alt"></i>
-                    <span>24-Hour Security</span>
+
+                <!-- Card 3: 24-Hour Security & CCTV -->
+                <div class="facility_card" data-category="safety">
+                    <span class="facility_card_badge">Verified Safe</span>
+                    <div class="facility_icon_wrapper">
+                        <div class="facility_icon_halo"></div>
+                        <i class="facility_icon fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="facility_name">24-Hour Security</h3>
+                    <p class="facility_desc">Continuous premise CCTV surveillance in common areas & dedicated safety staff.</p>
+                    <div class="facility_card_glow_line"></div>
                 </div>
-                <div class="facility_card">
-                    <i class="facility_icon fas fa-wind"></i>
-                    <span>Air Conditioning</span>
+
+                <!-- Card 4: Air Conditioning -->
+                <div class="facility_card" data-category="comfort">
+                    <span class="facility_card_badge">Climate Control</span>
+                    <div class="facility_icon_wrapper">
+                        <div class="facility_icon_halo"></div>
+                        <i class="facility_icon fas fa-snowflake"></i>
+                    </div>
+                    <h3 class="facility_name">Air Conditioning</h3>
+                    <p class="facility_desc">Whisper-quiet, modern individual split AC units installed in every private bedroom.</p>
+                    <div class="facility_card_glow_line"></div>
                 </div>
-                <div class="facility_card">
-                    <i class="facility_icon fas fa-video"></i>
-                    <span>CCTV in Common Areas</span>
+
+                <!-- Card 5: Free High-Speed Wi-Fi -->
+                <div class="facility_card" data-category="convenience">
+                    <span class="facility_card_badge">High-Speed</span>
+                    <div class="facility_icon_wrapper">
+                        <div class="facility_icon_halo"></div>
+                        <i class="facility_icon fas fa-wifi"></i>
+                    </div>
+                    <h3 class="facility_name">Free High-Speed Wi-Fi</h3>
+                    <p class="facility_desc">Fast fiber broadband coverage throughout rooms & lounge for work and streaming.</p>
+                    <div class="facility_card_glow_line"></div>
                 </div>
-                <div class="facility_card">
-                    <i class="facility_icon fas fa-utensils"></i>
-                    <span>Dining Area</span>
+
+                <!-- Card 6: Free Car Parking -->
+                <div class="facility_card" data-category="convenience">
+                    <span class="facility_card_badge">Complimentary</span>
+                    <div class="facility_icon_wrapper">
+                        <div class="facility_icon_halo"></div>
+                        <i class="facility_icon fas fa-parking"></i>
+                    </div>
+                    <h3 class="facility_name">Free Car Parking</h3>
+                    <p class="facility_desc">Spacious, secure on-premises parking bays for guest cars and two-wheelers.</p>
+                    <div class="facility_card_glow_line"></div>
                 </div>
-                <div class="facility_card">
-                    <i class="facility_icon fas fa-home"></i>
-                    <span>Family Rooms</span>
+
+                <!-- Card 7: Daily Housekeeping -->
+                <div class="facility_card" data-category="comfort">
+                    <span class="facility_card_badge">Spotless</span>
+                    <div class="facility_icon_wrapper">
+                        <div class="facility_icon_halo"></div>
+                        <i class="facility_icon fas fa-broom"></i>
+                    </div>
+                    <h3 class="facility_name">Daily Housekeeping</h3>
+                    <p class="facility_desc">Attentive room cleaning, sanitized linens, fresh towels & spotless hygiene standards.</p>
+                    <div class="facility_card_glow_line"></div>
                 </div>
-                <div class="facility_card">
-                    <i class="facility_icon fas fa-users"></i>
-                    <span>Family-Friendly</span>
+
+                <!-- Card 8: 24/7 Hot Water -->
+                <div class="facility_card" data-category="comfort">
+                    <span class="facility_card_badge">Instant Geyser</span>
+                    <div class="facility_icon_wrapper">
+                        <div class="facility_icon_halo"></div>
+                        <i class="facility_icon fas fa-shower"></i>
+                    </div>
+                    <h3 class="facility_name">24/7 Instant Hot Water</h3>
+                    <p class="facility_desc">Instant heating geysers in all private attached en-suite bathrooms for anytime warmth.</p>
+                    <div class="facility_card_glow_line"></div>
                 </div>
-                <div class="facility_card">
-                    <i class="facility_icon fas fa-tv"></i>
-                    <span>Flat-Screen TV</span>
+
+                <!-- Card 9: Flat-Screen TV -->
+                <div class="facility_card" data-category="comfort">
+                    <span class="facility_card_badge">In-Room HD</span>
+                    <div class="facility_icon_wrapper">
+                        <div class="facility_icon_halo"></div>
+                        <i class="facility_icon fas fa-tv"></i>
+                    </div>
+                    <h3 class="facility_name">Flat-Screen TV</h3>
+                    <p class="facility_desc">Crisp HD flat screens with regional, national & sports channels for entertainment.</p>
+                    <div class="facility_card_glow_line"></div>
                 </div>
-                <div class="facility_card">
-                    <i class="facility_icon fas fa-parking"></i>
-                    <span>Free Car Parking</span>
+
+                <!-- Card 10: Dining & Refrigerator Area -->
+                <div class="facility_card" data-category="convenience">
+                    <span class="facility_card_badge">Guest Access</span>
+                    <div class="facility_icon_wrapper">
+                        <div class="facility_icon_halo"></div>
+                        <i class="facility_icon fas fa-utensils"></i>
+                    </div>
+                    <h3 class="facility_name">Dining & Refrigerator</h3>
+                    <p class="facility_desc">Dedicated dining space with shared guest refrigerator access & RO purified drinking water.</p>
+                    <div class="facility_card_glow_line"></div>
                 </div>
-                <div class="facility_card">
-                    <i class="facility_icon fas fa-wifi"></i>
-                    <span>Free High-Speed Wi-Fi</span>
+
+                <!-- Card 11: Family-Friendly Spaces -->
+                <div class="facility_card" data-category="comfort">
+                    <span class="facility_card_badge">All Ages</span>
+                    <div class="facility_icon_wrapper">
+                        <div class="facility_icon_halo"></div>
+                        <i class="facility_icon fas fa-users"></i>
+                    </div>
+                    <h3 class="facility_name">Family-Friendly Rooms</h3>
+                    <p class="facility_desc">Peaceful, secure setting with spacious arrangements tailored for families and groups.</p>
+                    <div class="facility_card_glow_line"></div>
                 </div>
-                <div class="facility_card">
-                    <i class="facility_icon fas fa-broom"></i>
-                    <span>Daily Housekeeping</span>
+
+                <!-- Card 12: Prime Central Access -->
+                <div class="facility_card" data-category="convenience">
+                    <span class="facility_card_badge">Edappally Hub</span>
+                    <div class="facility_icon_wrapper">
+                        <div class="facility_icon_halo"></div>
+                        <i class="facility_icon fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="facility_name">Prime Central Location</h3>
+                    <p class="facility_desc">Just 2 mins to Edappally Metro, LuLu Mall, Aster Medcity & NH 66 highway access.</p>
+                    <div class="facility_card_glow_line"></div>
+                </div>
+            </div>
+
+            <!-- Concierge Assistance Banner -->
+            <div class="facilities_help_banner">
+                <div class="help_banner_inner">
+                    <div class="help_icon_box">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <div class="help_text">
+                        <h4>Need Special Arrangements or Early Check-In?</h4>
+                        <p>We are dedicated to making your stay seamless. Speak with our property manager anytime.</p>
+                    </div>
+                    <div class="help_cta">
+                        <a href="https://wa.me/917907572703?text=Hi%20Velvet%20Bloom,%20I%20have%20an%20inquiry%20about%20property%20facilities" target="_blank" class="main-btn help_btn" rel="noopener">
+                            <i class="fab fa-whatsapp mr-1"></i> Chat with Desk
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -538,14 +674,17 @@
             <div class="row align-items-end mb-4">
                 <div class="col-md-8 text-center text-md-left">
                     <div class="section_title pb-0">
-                        <span class="sub-title text-warning font-weight-bold text-uppercase" style="letter-spacing: 1px;">Location Highlights</span>
+                        <span class="sub-title text-warning font-weight-bold text-uppercase"
+                            style="letter-spacing: 1px;">Location Highlights</span>
                         <h2 class="title mt-2 mb-2">Nearby <span>Attractions</span></h2>
-                        <p class="mb-0">Popular destinations and travel hubs easily accessible from Velvet Bloom in Edappally, Kochi</p>
+                        <p class="mb-0">Popular destinations and travel hubs easily accessible from Velvet Bloom in
+                            Edappally, Kochi</p>
                     </div>
                 </div>
                 <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
                     <div class="nearby_carousel_nav">
-                        <button type="button" class="nearby_nav_btn" id="nearby_prev_btn" aria-label="Previous attraction">
+                        <button type="button" class="nearby_nav_btn" id="nearby_prev_btn"
+                            aria-label="Previous attraction">
                             <i class="fas fa-arrow-left"></i>
                         </button>
                         <button type="button" class="nearby_nav_btn" id="nearby_next_btn" aria-label="Next attraction">
@@ -562,96 +701,112 @@
                 <!-- Card 1 -->
                 <div class="nearby_card">
                     <div class="nearby_card_media">
-                        <img src="assets/images/nearby-marine-drive.jpg" alt="Marine Drive Promenade" class="nearby_card_img" loading="lazy">
+                        <img src="assets/images/nearby-marine-drive.jpg" alt="Marine Drive Promenade"
+                            class="nearby_card_img" loading="lazy">
                         <span class="nearby_card_dist"><i class="fas fa-map-marker-alt mr-1"></i> 7 km</span>
                     </div>
                     <div class="nearby_card_content">
                         <h3 class="nearby_card_title">Marine Drive Promenade</h3>
-                        <p class="nearby_card_desc">Scenic waterfront walkway along backwaters with boat cruises, shopping, and sunset views.</p>
+                        <p class="nearby_card_desc">Scenic waterfront walkway along backwaters with boat cruises,
+                            shopping, and sunset views.</p>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="nearby_card">
                     <div class="nearby_card_media">
-                        <img src="assets/images/nearby-st-francis.jpg" alt="Infopark Kochi" class="nearby_card_img" loading="lazy">
+                        <img src="assets/images/nearby-st-francis.jpg" alt="Infopark Kochi" class="nearby_card_img"
+                            loading="lazy">
                         <span class="nearby_card_dist"><i class="fas fa-map-marker-alt mr-1"></i> 3.5 km</span>
                     </div>
                     <div class="nearby_card_content">
                         <h3 class="nearby_card_title">Infopark Kochi</h3>
-                        <p class="nearby_card_desc">Major IT and business destination, ideal for corporate guests staying at Velvet Bloom.</p>
+                        <p class="nearby_card_desc">Major IT and business destination, ideal for corporate guests
+                            staying at Velvet Bloom.</p>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="nearby_card">
                     <div class="nearby_card_media">
-                        <img src="assets/images/nearby-lulu-mall.jpg" alt="Lulu International Mall Kochi" class="nearby_card_img" loading="lazy">
+                        <img src="assets/images/nearby-lulu-mall.jpg" alt="Lulu International Mall Kochi"
+                            class="nearby_card_img" loading="lazy">
                         <span class="nearby_card_dist"><i class="fas fa-map-marker-alt mr-1"></i> 1 km</span>
                     </div>
                     <div class="nearby_card_content">
                         <h3 class="nearby_card_title">Lulu Mall Kochi</h3>
-                        <p class="nearby_card_desc">One of India's largest shopping destinations with international brands, hypermarket, and dining.</p>
+                        <p class="nearby_card_desc">One of India's largest shopping destinations with international
+                            brands, hypermarket, and dining.</p>
                     </div>
                 </div>
 
                 <!-- Card 4 -->
                 <div class="nearby_card">
                     <div class="nearby_card_media">
-                        <img src="assets/images/nearby-high-court.png" alt="High Court of Kerala" class="nearby_card_img" loading="lazy">
+                        <img src="assets/images/nearby-high-court.png" alt="High Court of Kerala"
+                            class="nearby_card_img" loading="lazy">
                         <span class="nearby_card_dist"><i class="fas fa-map-marker-alt mr-1"></i> 6 km</span>
                     </div>
                     <div class="nearby_card_content">
                         <h3 class="nearby_card_title">High Court of Kerala</h3>
-                        <p class="nearby_card_desc">Apex judicial hub of Kerala located by Marine Drive with convenient connectivity from Edappally.</p>
+                        <p class="nearby_card_desc">Apex judicial hub of Kerala located by Marine Drive with convenient
+                            connectivity from Edappally.</p>
                     </div>
                 </div>
 
                 <!-- Card 5 -->
                 <div class="nearby_card">
                     <div class="nearby_card_media">
-                        <img src="assets/images/nearby-dutch-palace.jpg" alt="Fort Kochi & Mattancherry" class="nearby_card_img" loading="lazy">
+                        <img src="assets/images/nearby-dutch-palace.jpg" alt="Fort Kochi & Mattancherry"
+                            class="nearby_card_img" loading="lazy">
                         <span class="nearby_card_dist"><i class="fas fa-map-marker-alt mr-1"></i> 18 km</span>
                     </div>
                     <div class="nearby_card_content">
                         <h3 class="nearby_card_title">Fort Kochi & Heritage</h3>
-                        <p class="nearby_card_desc">Colonial architecture, Chinese fishing nets, boutique cafes, art galleries, and cultural walks.</p>
+                        <p class="nearby_card_desc">Colonial architecture, Chinese fishing nets, boutique cafes, art
+                            galleries, and cultural walks.</p>
                     </div>
                 </div>
 
                 <!-- Card 6 -->
                 <div class="nearby_card">
                     <div class="nearby_card_media">
-                        <img src="assets/images/nearby-railway-station.jpg" alt="Ernakulam Town Railway Station" class="nearby_card_img" loading="lazy">
+                        <img src="assets/images/nearby-railway-station.jpg" alt="Ernakulam Town Railway Station"
+                            class="nearby_card_img" loading="lazy">
                         <span class="nearby_card_dist"><i class="fas fa-map-marker-alt mr-1"></i> 6 km</span>
                     </div>
                     <div class="nearby_card_content">
                         <h3 class="nearby_card_title">Ernakulam Railway Station</h3>
-                        <p class="nearby_card_desc">Major railway interchange connecting all express routes across Kerala and southern India.</p>
+                        <p class="nearby_card_desc">Major railway interchange connecting all express routes across
+                            Kerala and southern India.</p>
                     </div>
                 </div>
 
                 <!-- Loop Card 1 -->
                 <div class="nearby_card">
                     <div class="nearby_card_media">
-                        <img src="assets/images/nearby-marine-drive.jpg" alt="Marine Drive Promenade" class="nearby_card_img" loading="lazy">
+                        <img src="assets/images/nearby-marine-drive.jpg" alt="Marine Drive Promenade"
+                            class="nearby_card_img" loading="lazy">
                         <span class="nearby_card_dist"><i class="fas fa-map-marker-alt mr-1"></i> 7 km</span>
                     </div>
                     <div class="nearby_card_content">
                         <h3 class="nearby_card_title">Marine Drive Promenade</h3>
-                        <p class="nearby_card_desc">Scenic waterfront walkway along backwaters with boat cruises, shopping, and sunset views.</p>
+                        <p class="nearby_card_desc">Scenic waterfront walkway along backwaters with boat cruises,
+                            shopping, and sunset views.</p>
                     </div>
                 </div>
 
                 <!-- Loop Card 2 -->
                 <div class="nearby_card">
                     <div class="nearby_card_media">
-                        <img src="assets/images/nearby-lulu-mall.jpg" alt="Lulu International Mall Kochi" class="nearby_card_img" loading="lazy">
+                        <img src="assets/images/nearby-lulu-mall.jpg" alt="Lulu International Mall Kochi"
+                            class="nearby_card_img" loading="lazy">
                         <span class="nearby_card_dist"><i class="fas fa-map-marker-alt mr-1"></i> 1 km</span>
                     </div>
                     <div class="nearby_card_content">
                         <h3 class="nearby_card_title">Lulu Mall Kochi</h3>
-                        <p class="nearby_card_desc">One of India's largest shopping destinations with international brands, hypermarket, and dining.</p>
+                        <p class="nearby_card_desc">One of India's largest shopping destinations with international
+                            brands, hypermarket, and dining.</p>
                     </div>
                 </div>
             </div>
@@ -1048,7 +1203,7 @@
     <!--====== WOW js ======-->
     <script src="assets/js/wow.min.js"></script>
     <!--====== Main js ======-->
-    <script src="assets/js/main.js?v=3.6"></script>
+    <script src="assets/js/main.js?v=3.7"></script>
 
     <script>
         $(document).ready(function () {
